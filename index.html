@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Noise Lab — DJ · Productor · Organizador de Eventos</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="page-transition"></div>
+
+<!-- SPLASH -->
+<div id="splash" role="dialog" aria-label="Bienvenido a The Noise Lab">
+  <div class="splash-particles"></div>
+  <div class="splash-grid"></div>
+  <div class="splash-glow"></div>
+  <div class="splash-content">
+    <p class="splash-label">Música Electrónica</p>
+    <h1 class="splash-title">THE NOISE<br>LAB</h1>
+    <p class="splash-subtitle">DJ · Productor · Organizador de Eventos</p>
+    <button id="splash-enter" class="splash-btn" aria-label="Entrar al sitio" onclick="var s=document.getElementById('splash');if(s){s.style.opacity='0';s.style.transform='scale(1.04)';s.style.pointerEvents='none';setTimeout(function(){s.remove()},800)}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Entrar
+    </button>
+  </div>
+  <div class="splash-progress"><div class="splash-progress-bar"></div></div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Inicio</a></li>
+    <li><a href="about.html">Sobre mí</a></li>
+    <li><a href="music.html">Música</a></li>
+    <li><a href="events.html">Eventos</a></li>
+    <li><a href="gallery.html">Galería</a></li>
+  </ul>
+  <a href="booking.html" class="nav-cta">Reservar</a>
+  <button class="nav-hamburger" aria-label="Toggle mobile menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html">Inicio</a>
+  <a href="about.html">Sobre mí</a>
+  <a href="music.html">Música</a>
+  <a href="events.html">Eventos</a>
+  <a href="gallery.html">Galería</a>
+  <a href="booking.html">Reservar</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow-1"></div>
+    <div class="hero-bg-glow-2"></div>
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag reveal">
+          <span class="hero-tag-dot"></span>
+          Disponible para reservas 2026
+        </div>
+        <h1 class="hero-title reveal" data-delay="1">
+          <span class="line-1">THE NOISE</span>
+          <span class="line-2">LAB</span>
+        </h1>
+        <p class="hero-desc reveal" data-delay="2">
+          Creando paisajes sonoros en la intersección del techno, deep house y la electrónica experimental. Un explorador incansable del sonido, ritmo y atmósfera.
+        </p>
+        <div class="hero-btns reveal" data-delay="3">
+          <a href="music.html" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            Escuchar
+          </a>
+          <a href="booking.html" class="btn btn-ghost">Reservar Show</a>
+        </div>
+        <div class="hero-stats reveal" data-delay="4">
+          <div>
+            <div class="hero-stat-num" data-count="200" data-suffix="+">0</div>
+            <div class="hero-stat-label">Shows Realizados</div>
+          </div>
+          <div>
+            <div class="hero-stat-num" data-count="40" data-suffix="+">0</div>
+            <div class="hero-stat-label">Países</div>
+          </div>
+          <div>
+            <div class="hero-stat-num" data-count="15" data-suffix="">0</div>
+            <div class="hero-stat-label">Lanzamientos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-right" data-delay="2">
+        <div class="hero-media-frame">
+          <div class="hero-media-placeholder">
+            <div class="hero-media-icon">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5">
+                <polygon points="23 7 16 12 23 17 23 7"/>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+              </svg>
+              <p style="font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:1rem">Video / Imagen</p>
+              <p style="font-size:.62rem;opacity:.35;margin-top:.4rem">Reemplaza el src en el HTML</p>
+            </div>
+            <div class="sound-wave" aria-hidden="true" style="position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%)">
+              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+            </div>
+          </div>
+          <!-- IMAGEN: <img src="foto.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"> -->
+          <!-- VIDEO:  <video src="clip.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;border-radius:inherit"></video> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURED TRACKS -->
+<section class="section tracks-section">
+  <div class="container">
+    <div class="reveal"><span class="section-tag">Featured Música</span></div>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+      <h2 class="section-title reveal" data-delay="1">Latest <span>Lanzamientos</span></h2>
+      <a href="music.html" class="btn btn-ghost btn-sm reveal" data-delay="2">Ver Todo</a>
+    </div>
+    <div class="tracks-grid">
+      <div class="track-card reveal" data-delay="1">
+        <div class="track-cover" style="background:linear-gradient(135deg,#1a6fff22,#4f46e522)">
+          <span style="color:var(--neon-blue)">▲</span>
+        </div>
+        <div class="track-info">
+          <div class="track-name">Subsystem Protocol</div>
+          <div class="track-meta">Mezcla Original · 2026</div>
+        </div>
+        <button class="track-play" aria-label="Play Subsystem Protocol">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="track-card reveal" data-delay="2">
+        <div class="track-cover" style="background:linear-gradient(135deg,#4f46e522,#818cf822)">
+          <span style="color:var(--neon-purple)">◆</span>
+        </div>
+        <div class="track-info">
+          <div class="track-name">Dark Matter EP</div>
+          <div class="track-meta">EP · 2025</div>
+        </div>
+        <button class="track-play" aria-label="Play Dark Matter EP">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="track-card reveal" data-delay="3">
+        <div class="track-cover" style="background:linear-gradient(135deg,#1a6fff15,#00ffaa22)">
+          <span style="color:#00ffaa">●</span>
+        </div>
+        <div class="track-info">
+          <div class="track-name">Resonance Fields</div>
+          <div class="track-meta">Remix · 2025</div>
+        </div>
+        <button class="track-play" aria-label="Play Resonance Fields">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="track-card reveal" data-delay="4">
+        <div class="track-cover" style="background:linear-gradient(135deg,#818cf822,#4f46e522)">
+          <span style="color:var(--neon-pink)">■</span>
+        </div>
+        <div class="track-info">
+          <div class="track-name">Temporal Drift</div>
+          <div class="track-meta">Mezcla Original · 2025</div>
+        </div>
+        <button class="track-play" aria-label="Play Temporal Drift">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- UPCOMING SHOWS -->
+<section class="section shows-section">
+  <div class="container">
+    <div class="reveal"><span class="section-tag">Fechas de Gira</span></div>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+      <h2 class="section-title reveal" data-delay="1">Próximos <span>Shows</span></h2>
+      <a href="events.html" class="btn btn-ghost btn-sm reveal" data-delay="2">All Eventos</a>
+    </div>
+    <div class="shows-list">
+      <div class="show-item reveal" data-delay="1">
+        <div class="show-date">APR 12<span>Saturday · 2026</span></div>
+        <div>
+          <div class="show-name">SUBSYSTEM 018</div>
+          <div class="show-venue">Tresor, Berlin, Germany</div>
+        </div>
+        <span class="show-tag sold-out">Agotado</span>
+        <a href="booking.html" class="btn btn-ghost btn-sm">Info</a>
+      </div>
+      <div class="show-item reveal" data-delay="2">
+        <div class="show-date">MAY 03<span>Saturday · 2026</span></div>
+        <div>
+          <div class="show-name">Ultra Música Festival</div>
+          <div class="show-venue">Bayfront Park, Miami, USA</div>
+        </div>
+        <span class="show-tag available">Entradas</span>
+        <a href="booking.html" class="btn btn-primary btn-sm">Comprar</a>
+      </div>
+      <div class="show-item reveal" data-delay="3">
+        <div class="show-date">MAY 24<span>Saturday · 2026</span></div>
+        <div>
+          <div class="show-name">Fabric London — Room 1</div>
+          <div class="show-venue">Fabric, London, UK</div>
+        </div>
+        <span class="show-tag available">Entradas</span>
+        <a href="booking.html" class="btn btn-primary btn-sm">Comprar</a>
+      </div>
+      <div class="show-item reveal" data-delay="4">
+        <div class="show-date">JUN 14<span>Saturday · 2026</span></div>
+        <div>
+          <div class="show-name">Awakenings Festival</div>
+          <div class="show-venue">Spaarnwoude, Amsterdam, NL</div>
+        </div>
+        <span class="show-tag soon">Próximamente</span>
+        <a href="booking.html" class="btn btn-ghost btn-sm">Notificar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <span class="section-tag" style="justify-content:center">Reservass</span>
+    <h2 class="section-title reveal">¿Listo para <span>Hacer Ruido?</span></h2>
+    <p class="section-subtitle reveal" data-delay="1">
+      Disponible para noches de club, festivales, eventos corporativos y reservas privadas en todo el mundo. Creemos una experiencia inolvidable.
+    </p>
+    <div class="btn-row reveal" data-delay="2">
+      <a href="booking.html" class="btn btn-primary">Reservar The Noise Lab</a>
+      <a href="about.html" class="btn btn-ghost">Saber Más</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">THE NOISE <span>LAB</span></div>
+        <p class="footer-desc">DJ · Productor · Organizador de Eventos pushing the boundaries of electronic music since 2018.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="SoundCloud">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 13.5C1 15.4 2.6 17 4.5 17H18a4 4 0 000-8 4.5 4.5 0 00-8.5 1.5A3 3 0 001 13.5z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93zm1.24-2.76c-.25.4-.78.52-1.18.27-2.92-1.79-7.37-2.31-10.82-1.26-.45.13-.92-.12-1.05-.57-.13-.45.12-.92.57-1.05 3.95-1.2 8.85-.62 12.21 1.43.4.25.52.78.27 1.18zm.11-2.87c-3.5-2.08-9.28-2.27-12.62-1.26-.54.16-1.1-.14-1.27-.68-.16-.54.14-1.1.68-1.27 3.84-1.17 10.22-.94 14.26 1.45.49.29.65.91.36 1.4-.29.49-.91.65-1.4.36z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+          <li><a href="music.html">Música</a></li>
+          <li><a href="events.html">Eventos</a></li>
+          <li><a href="gallery.html">Galería</a></li>
+          <li><a href="booking.html">Reservas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Música</h4>
+        <ul>
+          <li><a href="#">Spotify</a></li>
+          <li><a href="#">SoundCloud</a></li>
+          <li><a href="#">Beatport</a></li>
+          <li><a href="#">Apple Música</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="/cdn-cgi/l/email-protection#b0d2dfdfdbd9ded7c3f0c4d8d5dedfd9c3d5dcd1d29ed3dfdd"><span class="__cf_email__" data-cfemail="9cfef3f3f7f5f2fbefdce8f4f9f2f3f5eff9f0fdfeb2fff3f1">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#b9c9cbdccacaf9cdd1dcd7d6d0cadcd5d8db97dad6d4"><span class="__cf_email__" data-cfemail="1f6f6d7a6c6c5f6b777a7170766c7a737e7d317c7072">[email&#160;protected]</span></a></li>
+          <li><a href="#">Kit de Prensa</a></li>
+          <li><a href="#">Rider Técnico</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Noise Lab. All los derechos reservados.</span>
+      <span>Empujando fronteras sónicas en todo el mundo.</span>
+    </div>
+  </div>
+</footer>
+</div>
+  <script src="js/script.js"></script>
+</body>
+</html>

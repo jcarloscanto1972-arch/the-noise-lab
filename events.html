@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos — The Noise Lab</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="page-transition"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Sobre mí</a></li>
+    <li><a href="music.html">Música</a></li>
+    <li><a href="events.html" class="active">Eventos</a></li>
+    <li><a href="gallery.html">Galería</a></li>
+  </ul>
+  <a href="booking.html" class="nav-cta">Reservar</a>
+  <button class="nav-hamburger" aria-label="Toggle mobile menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html">Inicio</a>
+  <a href="about.html">Sobre mí</a>
+  <a href="music.html">Música</a>
+  <a href="events.html">Eventos</a>
+  <a href="gallery.html">Galería</a>
+  <a href="booking.html">Reservar</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-inner">
+    <div class="reveal"><span class="section-tag">De Gira 2026</span></div>
+    <h1 class="page-hero-title reveal" data-delay="1">Upcoming <span>Eventos</span></h1>
+    <p class="section-subtitle reveal" data-delay="2">Shows, fechas de festival y la serie SUBSYSTEM.</p>
+  </div>
+</section>
+
+<!-- UPCOMING SHOWS -->
+<section class="section" style="background:var(--bg-1)">
+  <div class="container">
+    <div class="reveal"><span class="section-tag">No Te Lo Pierdas</span></div>
+    <h2 class="section-title reveal" data-delay="1">Próximos <span>Shows</span></h2>
+
+    <div class="events-full" style="margin-top:3rem">
+
+      <div class="event-row reveal" data-delay="1">
+        <div class="event-date-block">
+          <div class="event-day">18</div>
+          <div class="event-month">APR</div>
+          <div class="event-year">2026</div>
+        </div>
+        <div>
+          <div class="event-title">Tresor Berlin</div>
+          <div class="event-loc">📍 Berlin, Germany · Set Principal · 3h</div>
+        </div>
+        <div class="event-actions">
+          <span class="show-tag available">Entradas</span>
+          <a href="booking.html" class="btn btn-primary btn-sm">Comprar</a>
+        </div>
+      </div>
+
+      <div class="event-row reveal" data-delay="2">
+        <div class="event-date-block">
+          <div class="event-day">03</div>
+          <div class="event-month">MAY</div>
+          <div class="event-year">2026</div>
+        </div>
+        <div>
+          <div class="event-title">Fabric London — Room 1</div>
+          <div class="event-loc">📍 London, UK · Set B2B · 2h</div>
+        </div>
+        <div class="event-actions">
+          <span class="show-tag available">Entradas</span>
+          <a href="booking.html" class="btn btn-primary btn-sm">Comprar</a>
+        </div>
+      </div>
+
+      <div class="event-row reveal" data-delay="3">
+        <div class="event-date-block">
+          <div class="event-day">24</div>
+          <div class="event-month">MAY</div>
+          <div class="event-year">2026</div>
+        </div>
+        <div>
+          <div class="event-title">Resistance Festival — Ibiza</div>
+          <div class="event-loc">📍 Ibiza, Spain · Evento Propio · All Night</div>
+        </div>
+        <div class="event-actions">
+          <span class="show-tag soon">Próximamente</span>
+          <a href="booking.html" class="btn btn-ghost btn-sm">Notificar</a>
+        </div>
+      </div>
+
+      <div class="event-row reveal" data-delay="4">
+        <div class="event-date-block">
+          <div class="event-day">07</div>
+          <div class="event-month">JUN</div>
+          <div class="event-year">2026</div>
+        </div>
+        <div>
+          <div class="event-title">Boiler Room Tokyo</div>
+          <div class="event-loc">📍 Tokyo, Japan · Set Principal · 3h</div>
+        </div>
+        <div class="event-actions">
+          <span class="show-tag available">Entradas</span>
+          <a href="booking.html" class="btn btn-primary btn-sm">Comprar</a>
+        </div>
+      </div>
+
+      <div class="event-row reveal" data-delay="5">
+        <div class="event-date-block">
+          <div class="event-day">12</div>
+          <div class="event-month">JUL</div>
+          <div class="event-year">2026</div>
+        </div>
+        <div>
+          <div class="event-title">DC-10 Ibiza — Terrace</div>
+          <div class="event-loc">📍 Ibiza, Spain · Set en Terraza · 4h</div>
+        </div>
+        <div class="event-actions">
+          <span class="show-tag sold-out">Agotado</span>
+          <a href="booking.html" class="btn btn-ghost btn-sm">Info</a>
+        </div>
+      </div>
+
+      <div class="event-row reveal" data-delay="6">
+        <div class="event-date-block">
+          <div class="event-day">20</div>
+          <div class="event-month">AUG</div>
+          <div class="event-year">2026</div>
+        </div>
+        <div>
+          <div class="event-title">SUBSYSTEM 055 — Mexico City</div>
+          <div class="event-loc">📍 Mexico City, Mexico · Evento Propio · All Night</div>
+        </div>
+        <div class="event-actions">
+          <span class="show-tag soon">Próximamente</span>
+          <a href="booking.html" class="btn btn-ghost btn-sm">Notificar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SUBSYSTEM SERIES -->
+<section class="section subsystem-section">
+  <div class="container">
+    <div class="subsystem-hero reveal">
+      <div class="reveal"><span class="section-tag">Serie Insignia</span></div>
+      <div class="subsystem-title reveal" data-delay="1">SUBSYSTEM</div>
+      <p class="section-subtitle reveal" data-delay="2" style="max-width:620px;margin-top:1rem">
+        The Noise Lab's own event series — a roaming underground experience landing in 15 cities across 3 continents since 2020. Each edition features hand-picked lineups, premium soundsystems and immersive visual design.
+      </p>
+      <div style="margin-top:2rem" class="reveal" data-delay="3">
+        <a href="booking.html" class="btn btn-purple">Trae SUBSYSTEM a Tu Ciudad</a>
+      </div>
+      <div class="subsystem-stats reveal" data-delay="4">
+        <div class="subsystem-stat">
+          <div class="subsystem-stat-num" data-count="55" data-suffix="">0</div>
+          <div class="subsystem-stat-label">Ediciones</div>
+        </div>
+        <div class="subsystem-stat">
+          <div class="subsystem-stat-num" data-count="15" data-suffix="">0</div>
+          <div class="subsystem-stat-label">Ciudades</div>
+        </div>
+        <div class="subsystem-stat">
+          <div class="subsystem-stat-num" data-count="120" data-suffix="+">0</div>
+          <div class="subsystem-stat-label">Artistas Contratados</div>
+        </div>
+        <div class="subsystem-stat">
+          <div class="subsystem-stat-num" data-count="6" data-suffix="">0</div>
+          <div class="subsystem-stat-label">Años en Activo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PAST EVENTS -->
+<section class="section" style="background:var(--bg-0)">
+  <div class="container">
+    <div class="reveal"><span class="section-tag">Historia</span></div>
+    <h2 class="section-title reveal" data-delay="1">Past <span>Eventos</span></h2>
+    <div class="past-events-grid">
+      <div class="past-card reveal" data-delay="1">
+        <div class="past-card-bg" style="background:linear-gradient(135deg,#1a6fff18,#0b0b18)"></div>
+        <div class="past-card-overlay"></div>
+        <div class="past-card-info">
+          <div class="past-card-name">Dekmantel Festival</div>
+          <div class="past-card-date">Amsterdam, NL · 2025 · Escenario Principal</div>
+        </div>
+      </div>
+      <div class="past-card reveal" data-delay="2">
+        <div class="past-card-bg" style="background:linear-gradient(135deg,#4f46e518,#0b0b18)"></div>
+        <div class="past-card-overlay"></div>
+        <div class="past-card-info">
+          <div class="past-card-name">ADE Showcase</div>
+          <div class="past-card-date">Amsterdam, NL · 2025 · Shelter</div>
+        </div>
+      </div>
+      <div class="past-card reveal" data-delay="3">
+        <div class="past-card-bg" style="background:linear-gradient(135deg,#818cf818,#0b0b18)"></div>
+        <div class="past-card-overlay"></div>
+        <div class="past-card-info">
+          <div class="past-card-name">Boiler Room Berlin</div>
+          <div class="past-card-date">Berlin, DE · 2024 · 3.2M Vers</div>
+        </div>
+      </div>
+      <div class="past-card reveal" data-delay="4">
+        <div class="past-card-bg" style="background:linear-gradient(135deg,#1a6fff18,#4f46e518)"></div>
+        <div class="past-card-overlay"></div>
+        <div class="past-card-info">
+          <div class="past-card-name">Movement Detroit</div>
+          <div class="past-card-date">Detroit, US · 2024 · Escenario de Festival</div>
+        </div>
+      </div>
+      <div class="past-card reveal" data-delay="5">
+        <div class="past-card-bg" style="background:linear-gradient(135deg,#4f46e522,#0b0b18)"></div>
+        <div class="past-card-overlay"></div>
+        <div class="past-card-info">
+          <div class="past-card-name">Time Warp</div>
+          <div class="past-card-date">Mannheim, DE · 2023</div>
+        </div>
+      </div>
+      <div class="past-card reveal" data-delay="6">
+        <div class="past-card-bg" style="background:linear-gradient(135deg,#1a6fff15,#0b0b18)"></div>
+        <div class="past-card-overlay"></div>
+        <div class="past-card-info">
+          <div class="past-card-name">Berghain</div>
+          <div class="past-card-date">Berlin, DE · 2022</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <span class="section-tag" style="justify-content:center">Reservass</span>
+    <h2 class="section-title reveal">Reserva para tu <span>próximo evento</span></h2>
+    <p class="section-subtitle reveal" data-delay="1">Slots principales, sets en festivales y producciones SUBSYSTEM en todo el mundo.</p>
+    <div class="btn-row reveal" data-delay="2">
+      <a href="booking.html" class="btn btn-primary">Contactar</a>
+      <a href="about.html" class="btn btn-ghost">Saber Más</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">THE NOISE <span>LAB</span></div>
+        <p class="footer-desc">DJ · Productor · Organizador de Eventos pushing the boundaries of electronic music since 2018.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="SoundCloud">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 13.5C1 15.4 2.6 17 4.5 17H18a4 4 0 000-8 4.5 4.5 0 00-8.5 1.5A3 3 0 001 13.5z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93zm1.24-2.76c-.25.4-.78.52-1.18.27-2.92-1.79-7.37-2.31-10.82-1.26-.45.13-.92-.12-1.05-.57-.13-.45.12-.92.57-1.05 3.95-1.2 8.85-.62 12.21 1.43.4.25.52.78.27 1.18zm.11-2.87c-3.5-2.08-9.28-2.27-12.62-1.26-.54.16-1.1-.14-1.27-.68-.16-.54.14-1.1.68-1.27 3.84-1.17 10.22-.94 14.26 1.45.49.29.65.91.36 1.4-.29.49-.91.65-1.4.36z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+          <li><a href="music.html">Música</a></li>
+          <li><a href="events.html">Eventos</a></li>
+          <li><a href="gallery.html">Galería</a></li>
+          <li><a href="booking.html">Reservas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Música</h4>
+        <ul>
+          <li><a href="#">Spotify</a></li>
+          <li><a href="#">SoundCloud</a></li>
+          <li><a href="#">Beatport</a></li>
+          <li><a href="#">Apple Música</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="/cdn-cgi/l/email-protection#1c7e73737775727b6f5c6874797273756f79707d7e327f7371"><span class="__cf_email__" data-cfemail="6f0d0000040601081c2f1b070a0100061c0a030e0d410c0002">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#81f1f3e4f2f2c1f5e9e4efeee8f2e4ede0e3afe2eeec"><span class="__cf_email__" data-cfemail="0d7d7f687e7e4d7965686362647e68616c6f236e6260">[email&#160;protected]</span></a></li>
+          <li><a href="#">Kit de Prensa</a></li>
+          <li><a href="#">Rider Técnico</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Noise Lab. All los derechos reservados.</span>
+      <span>Empujando fronteras sónicas en todo el mundo.</span>
+    </div>
+  </div>
+</footer>
+</div>
+  <script src="js/script.js"></script>
+</body>
+</html>

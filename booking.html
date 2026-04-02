@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas — The Noise Lab</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="page-transition"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Sobre mí</a></li>
+    <li><a href="music.html">Música</a></li>
+    <li><a href="events.html">Eventos</a></li>
+    <li><a href="gallery.html">Galería</a></li>
+  </ul>
+  <a href="booking.html" class="nav-cta active">Reservar</a>
+  <button class="nav-hamburger" aria-label="Toggle mobile menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html">Inicio</a>
+  <a href="about.html">Sobre mí</a>
+  <a href="music.html">Música</a>
+  <a href="events.html">Eventos</a>
+  <a href="gallery.html">Galería</a>
+  <a href="booking.html">Reservar</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-inner">
+    <div class="reveal"><span class="section-tag">Contactar</span></div>
+    <h1 class="page-hero-title reveal" data-delay="1">Reservar <span>The Noise Lab</span></h1>
+    <p class="section-subtitle reveal" data-delay="2">Construyamos algo que valga la pena recordar.</p>
+  </div>
+</section>
+
+<!-- BOOKING LAYOUT -->
+<section class="section" style="background:var(--bg-1)">
+  <div class="container">
+    <div class="booking-layout">
+
+      <!-- INFO -->
+      <div class="booking-info-card reveal reveal-left">
+        <div class="section-tag" style="margin-bottom:1.25rem">Contacto Directoo</div>
+        <h2 style="font-family:var(--ff-head);font-size:2rem;line-height:1;margin-bottom:1rem">
+          Hagamos<br><span style="color:var(--neon-blue)">ruido juntos</span>
+        </h2>
+        <p style="font-size:.85rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1.5rem">
+          Ya sea un slot principal, un escenario de festival, una colaboración B2B, o traer SUBSYSTEM a tu ciudad — completa el formulario y te responderemos en 48 horas.
+        </p>
+        <div class="booking-contact">
+          <p style="font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem">Email directo</p>
+          <a href="/cdn-cgi/l/email-protection#284a47474341464f5b685c404d4647415b4d44494a064b4745" class="booking-email"><span class="__cf_email__" data-cfemail="d0b2bfbfbbb9beb7a390a4b8b5bebfb9a3b5bcb1b2feb3bfbd">[email&#160;protected]</span></a>
+        </div>
+        <div class="booking-types">
+          <div class="booking-type">
+            <div class="booking-type-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            </div>
+            <div>
+              <div class="booking-type-name">Sets de Club / Festival</div>
+              <div class="booking-type-desc">Slots principales, sets de soporte, escenarios de festival</div>
+            </div>
+          </div>
+          <div class="booking-type">
+            <div class="booking-type-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <div class="booking-type-name">Producción SUBSYSTEM</div>
+              <div class="booking-type-desc">Evento completo: lineup, visuales y diseño de sonido</div>
+            </div>
+          </div>
+          <div class="booking-type">
+            <div class="booking-type-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <div class="booking-type-name">Colaboraciones B2B</div>
+              <div class="booking-type-desc">Sets back-to-back con artistas seleccionados</div>
+            </div>
+          </div>
+          <div class="booking-type">
+            <div class="booking-type-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div class="booking-type-name">Prensa y Medios</div>
+              <div class="booking-type-desc">Entrevistas, artículos, solicitudes de EPK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="booking-form-wrap reveal reveal-right">
+        <form id="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-name">Nombre Completo *</label>
+              <input class="form-input" type="text" id="f-name" name="name" placeholder="Tu nombre" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">Email *</label>
+              <input class="form-input" type="email" id="f-email" name="email" placeholder="your@email.com" required>
+              <span class="form-error"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-org">Organización / Venue</label>
+              <input class="form-input" type="text" id="f-org" name="org" placeholder="Club, festival, agencia...">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-date">Fecha del Evento</label>
+              <input class="form-input" type="date" id="f-date" name="date">
+            </div>
+          </div>
+          <div class="form-group form-group full">
+            <label class="form-label" for="f-type">Reservas Type *</label>
+            <select class="form-select" id="f-type" name="type" required>
+              <option value="" disabled selected>Selecciona el tipo de reserva...</option>
+              <option value="headline">Set Principal de Club</option>
+              <option value="festival">Escenario de Festival</option>
+              <option value="b2b">Colaboración B2B</option>
+              <option value="subsystem">Producción de Evento SUBSYSTEM</option>
+              <option value="private">Evento Privado / Corporativo</option>
+              <option value="press">Prensa y Medios Inquiry</option>
+              <option value="other">Otro</option>
+            </select>
+            <span class="form-error"></span>
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="f-location">Ubicación</label>
+            <input class="form-input" type="text" id="f-location" name="location" placeholder="Ciudad, País">
+          </div>
+          <div class="form-group full">
+            <label class="form-label" for="f-message">Mensaje *</label>
+            <textarea class="form-textarea" id="f-message" name="message" rows="5" placeholder="Cuéntanos sobre tu evento, visión y cualquier detalle relevante..." required></textarea>
+            <span class="form-error"></span>
+          </div>
+          <button type="submit" class="form-submit">Enviar Consulta →</button>
+          <div class="form-success">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p style="font-family:var(--ff-head);font-size:1.5rem;margin-top:.5rem">¡Consulta Enviada!</p>
+            <p style="font-size:.85rem;color:var(--text-secondary)">Te responderemos en un plazo de 48 horas.</p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--bg-0)">
+  <div class="container">
+    <div class="reveal"><span class="section-tag">Respuestas Rápidas</span></div>
+    <h2 class="section-title reveal" data-delay="1">FAQ</h2>
+    <div class="faq-grid">
+      <div class="faq-card reveal" data-delay="1">
+        <div class="faq-q">¿Cuál es el tiempo de respuesta?</div>
+        <div class="faq-a">We reply to all inquiries within 24–48 hours. Festival and large event requests may take slightly longer.</div>
+      </div>
+      <div class="faq-card reveal" data-delay="2">
+        <div class="faq-q">¿Qué formatos están disponibles?</div>
+        <div class="faq-a">Sets de DJ (1h a 6h+), actuaciones modulares en vivo, sets B2B y producciones completas de eventos SUBSYSTEM.</div>
+      </div>
+      <div class="faq-card reveal" data-delay="3">
+        <div class="faq-q">¿Cuál es el rider técnico?</div>
+        <div class="faq-a">Setup estándar: Pioneer CDJ-3000 o equivalente Denon, DJM-900 NXS2 y monitoreo profesional. Rider completo bajo solicitud.</div>
+      </div>
+      <div class="faq-card reveal" data-delay="4">
+        <div class="faq-q">¿Reservas internacionales?</div>
+        <div class="faq-a">Yes — The Noise Lab performs globally. All visa, travel, and logistics are managed through our booking team.</div>
+      </div>
+      <div class="faq-card reveal" data-delay="5">
+        <div class="faq-q">¿Antelación mínima para reservar?</div>
+        <div class="faq-a">Recomendamos contactarnos con al menos 6 semanas de antelación para sets de club, y 3-6 meses para festivales y producciones.</div>
+      </div>
+      <div class="faq-card reveal" data-delay="6">
+        <div class="faq-q">¿Puedo solicitar una duración específica del set?</div>
+        <div class="faq-a">Absolutely. Standard sets run 1–3 hours. All-night sets and extended formats are available by arrangement.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">THE NOISE <span>LAB</span></div>
+        <p class="footer-desc">DJ · Productor · Organizador de Eventos pushing the boundaries of electronic music since 2018.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="SoundCloud">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 13.5C1 15.4 2.6 17 4.5 17H18a4 4 0 000-8 4.5 4.5 0 00-8.5 1.5A3 3 0 001 13.5z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93zm1.24-2.76c-.25.4-.78.52-1.18.27-2.92-1.79-7.37-2.31-10.82-1.26-.45.13-.92-.12-1.05-.57-.13-.45.12-.92.57-1.05 3.95-1.2 8.85-.62 12.21 1.43.4.25.52.78.27 1.18zm.11-2.87c-3.5-2.08-9.28-2.27-12.62-1.26-.54.16-1.1-.14-1.27-.68-.16-.54.14-1.1.68-1.27 3.84-1.17 10.22-.94 14.26 1.45.49.29.65.91.36 1.4-.29.49-.91.65-1.4.36z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+          <li><a href="music.html">Música</a></li>
+          <li><a href="events.html">Eventos</a></li>
+          <li><a href="gallery.html">Galería</a></li>
+          <li><a href="booking.html">Reservas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Música</h4>
+        <ul>
+          <li><a href="#">Spotify</a></li>
+          <li><a href="#">SoundCloud</a></li>
+          <li><a href="#">Beatport</a></li>
+          <li><a href="#">Apple Música</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="/cdn-cgi/l/email-protection#177578787c7e79706457637f7279787e64727b76753974787a"><span class="__cf_email__" data-cfemail="24464b4b4f4d4a435764504c414a4b4d57414845460a474b49">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#92e2e0f7e1e1d2e6faf7fcfdfbe1f7fef3f0bcf1fdff"><span class="__cf_email__" data-cfemail="15656770666655617d707b7a7c66707974773b767a78">[email&#160;protected]</span></a></li>
+          <li><a href="#">Kit de Prensa</a></li>
+          <li><a href="#">Rider Técnico</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Noise Lab. All los derechos reservados.</span>
+      <span>Empujando fronteras sónicas en todo el mundo.</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

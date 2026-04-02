@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Música — The Noise Lab</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="page-transition"></div>
+
+
+
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Sobre mí</a></li>
+    <li><a href="music.html" class="active">Música</a></li>
+    <li><a href="events.html">Eventos</a></li>
+    <li><a href="gallery.html">Galería</a></li>
+  </ul>
+  <a href="booking.html" class="nav-cta">Reservar</a>
+  <button class="nav-hamburger" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html">Inicio</a><a href="about.html">Sobre mí</a><a href="music.html">Música</a>
+  <a href="events.html">Eventos</a><a href="gallery.html">Galería</a><a href="booking.html">Reservar</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-inner">
+    <span class="section-tag reveal">Discografía</span>
+    <h1 class="page-hero-title reveal" data-delay="1">The <span>Música</span></h1>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RELEASES -->
+<section class="section" style="background:var(--bg-1)">
+  <div class="container">
+    <span class="section-tag reveal">Discografía</span>
+    <h2 class="section-title reveal" data-delay="1">Estudio <span>Lanzamientos</span></h2>
+    <p class="section-subtitle reveal" data-delay="2">Original productions and EPs on Drumcode, Kompakt and Subsystem Records.</p>
+
+    <div class="releases-grid">
+      <div class="release-card reveal" data-delay="1">
+        <div class="release-artwork">
+          <div class="release-artwork-inner" style="background:linear-gradient(135deg,#001f3f,#1a6fff22,#0b0b18)">
+            <span style="color:var(--neon-blue);font-size:3rem">◉</span>
+          </div>
+          <div class="release-overlay">
+            <a href="#" class="btn btn-ghost btn-sm">Spotify</a>
+            <a href="#" class="btn btn-ghost btn-sm">Comprar</a>
+          </div>
+        </div>
+        <div class="release-info">
+          <div class="release-type">Single</div>
+          <div class="release-title">Subsystem Protocol</div>
+          <div class="release-meta">Subsystem Records · Jan 2026</div>
+        </div>
+      </div>
+      <div class="release-card reveal" data-delay="2">
+        <div class="release-artwork">
+          <div class="release-artwork-inner" style="background:linear-gradient(135deg,#1a0030,#4f46e530,#0b0b18)">
+            <span style="color:var(--neon-purple);font-size:3rem">▲</span>
+          </div>
+          <div class="release-overlay">
+            <a href="#" class="btn btn-ghost btn-sm">Spotify</a>
+            <a href="#" class="btn btn-ghost btn-sm">Comprar</a>
+          </div>
+        </div>
+        <div class="release-info">
+          <div class="release-type">EP — 4 Tracks</div>
+          <div class="release-title">Dark Matter EP</div>
+          <div class="release-meta">Drumcode · Oct 2025</div>
+        </div>
+      </div>
+      <div class="release-card reveal" data-delay="3">
+        <div class="release-artwork">
+          <div class="release-artwork-inner" style="background:linear-gradient(135deg,#002010,#00ff8822,#0b0b18)">
+            <span style="color:#00ff88;font-size:3rem">■</span>
+          </div>
+          <div class="release-overlay">
+            <a href="#" class="btn btn-ghost btn-sm">Spotify</a>
+            <a href="#" class="btn btn-ghost btn-sm">Comprar</a>
+          </div>
+        </div>
+        <div class="release-info">
+          <div class="release-type">Remix</div>
+          <div class="release-title">Resonance Fields (Remix)</div>
+          <div class="release-meta">Kompakt · Jul 2025</div>
+        </div>
+      </div>
+      <div class="release-card reveal" data-delay="4">
+        <div class="release-artwork">
+          <div class="release-artwork-inner" style="background:linear-gradient(135deg,#300010,#818cf830,#0b0b18)">
+            <span style="color:var(--neon-pink);font-size:3rem">◆</span>
+          </div>
+          <div class="release-overlay">
+            <a href="#" class="btn btn-ghost btn-sm">Spotify</a>
+            <a href="#" class="btn btn-ghost btn-sm">Comprar</a>
+          </div>
+        </div>
+        <div class="release-info">
+          <div class="release-type">Single</div>
+          <div class="release-title">Temporal Drift</div>
+          <div class="release-meta">Subsystem Records · Mar 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platforms -->
+    <div class="platforms-row reveal">
+      <span class="platforms-label">Listen on</span>
+      <a href="#" class="platform-btn" aria-label="Spotify">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93z"/></svg>
+        Spotify
+      </a>
+      <a href="#" class="platform-btn" aria-label="SoundCloud">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1 13.5C1 15.4 2.6 17 4.5 17H18a4 4 0 000-8 4.5 4.5 0 00-8.5 1.5A3 3 0 001 13.5z"/></svg>
+        SoundCloud
+      </a>
+      <a href="#" class="platform-btn" aria-label="Beatport">● Beatport</a>
+      <a href="#" class="platform-btn" aria-label="Apple Música">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Apple Música
+      </a>
+      <a href="#" class="platform-btn" aria-label="YouTube">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg>
+        YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DJ SETS -->
+<section class="section" style="background:var(--bg-0)">
+  <div class="container">
+    <span class="section-tag reveal">En Vivo Recordings</span>
+    <h2 class="section-title reveal" data-delay="1">Sets de <span>DJ</span></h2>
+    <p class="section-subtitle reveal" data-delay="2">Recordings from live performances around the world.</p>
+
+    <div class="sets-grid">
+      <div class="set-card reveal" data-delay="1">
+        <div class="set-thumb" style="background:linear-gradient(135deg,#001428,#1a6fff18)">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem">
+            <div style="font-family:var(--ff-head);font-size:2rem;color:rgba(26,111,255,.3);letter-spacing:.1em">TRESOR</div>
+            <div style="font-size:.65rem;color:var(--text-muted);letter-spacing:.2em">BERLIN · 2025</div>
+          </div>
+          <button class="set-play-btn" aria-label="Play Tresor Berlin set">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="set-info">
+          <div class="set-name">Tresor, Berlin</div>
+          <div class="set-meta">3h En Vivo Set · November 2025</div>
+        </div>
+      </div>
+      <div class="set-card reveal" data-delay="2">
+        <div class="set-thumb" style="background:linear-gradient(135deg,#160028,#4f46e518)">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem">
+            <div style="font-family:var(--ff-head);font-size:2rem;color:rgba(79,70,229,.3);letter-spacing:.1em">FABRIC</div>
+            <div style="font-size:.65rem;color:var(--text-muted);letter-spacing:.2em">LONDON · 2025</div>
+          </div>
+          <button class="set-play-btn" aria-label="Play Fabric London set">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="set-info">
+          <div class="set-name">Fabric, London — Room 1</div>
+          <div class="set-meta">2h30 En Vivo Set · September 2025</div>
+        </div>
+      </div>
+      <div class="set-card reveal" data-delay="3">
+        <div class="set-thumb" style="background:linear-gradient(135deg,#002008,#00ff8818)">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem">
+            <div style="font-family:var(--ff-head);font-size:1.5rem;color:rgba(0,255,136,.3);letter-spacing:.05em">AWAKENINGS</div>
+            <div style="font-size:.65rem;color:var(--text-muted);letter-spacing:.2em">AMSTERDAM · 2025</div>
+          </div>
+          <button class="set-play-btn" aria-label="Play Awakenings set">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+        <div class="set-info">
+          <div class="set-name">Awakenings Festival</div>
+          <div class="set-meta">2h Festival Set · June 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <span class="section-tag" style="justify-content:center">Reservass</span>
+    <h2 class="section-title reveal">Book The <span>Experience</span></h2>
+    <p class="section-subtitle reveal" data-delay="1">Available for clubs, festivals, and events worldwide. Rider Técnico and tech specs on request.</p>
+    <div class="btn-row reveal" data-delay="2">
+      <a href="booking.html" class="btn btn-primary">Get in Touch</a>
+      <a href="events.html" class="btn btn-ghost">Upcoming Shows</a>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">THE NOISE <span>LAB</span></div>
+        <p class="footer-desc">DJ · Productor · Organizador de Eventos pushing the boundaries of electronic music since 2018.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social-btn" aria-label="SoundCloud"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 13.5C1 15.4 2.6 17 4.5 17H18a4 4 0 000-8 4.5 4.5 0 00-8.5 1.5A3 3 0 001 13.5z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navegación</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="about.html">Sobre mí</a></li><li><a href="music.html">Música</a></li><li><a href="events.html">Eventos</a></li><li><a href="gallery.html">Galería</a></li><li><a href="booking.html">Reservas</a></li></ul></div>
+      <div class="footer-col"><h4>Música</h4><ul><li><a href="#">Spotify</a></li><li><a href="#">SoundCloud</a></li><li><a href="#">Beatport</a></li><li><a href="#">Apple Música</a></li><li><a href="#">YouTube</a></li></ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul><li><a href="/cdn-cgi/l/email-protection#15777a7a7e7c7b726655617d707b7a7c66707974773b767a78"><span class="__cf_email__" data-cfemail="ddbfb2b2b6b4b3baae9da9b5b8b3b2b4aeb8b1bcbff3beb2b0">[email&#160;protected]</span></a></li><li><a href="/cdn-cgi/l/email-protection#1d6d6f786e6e5d6975787372746e78717c7f337e7270"><span class="__cf_email__" data-cfemail="abdbd9ced8d8ebdfc3cec5c4c2d8cec7cac985c8c4c6">[email&#160;protected]</span></a></li><li><a href="#">Kit de Prensa</a></li><li><a href="#">Rider Técnico</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 The Noise Lab. All los derechos reservados.</span><span>Empujando fronteras sónicas en todo el mundo.</span></div>
+  </div>
+</footer>
+</div>
+  <script src="js/script.js"></script>
+</body>
+</html>
