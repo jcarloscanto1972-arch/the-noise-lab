@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Noise Lab — DJ · Productor · Organizador de Eventos</title>
+  <title>The Noise Lab — Más de tres décadas de experiencia en el espectáculo y el entretenimiento avalan nuestro compromiso con la excelencia.</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>if(sessionStorage.getItem('visited')){document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('splash');if(s){s.style.display='none';}});}</script>
 </head>
 <body>
 
@@ -23,10 +22,11 @@
   <div class="splash-grid"></div>
   <div class="splash-glow"></div>
   <div class="splash-content">
-    <p class="splash-label">Música Electrónica</p>
+    <p class="splash-label">Producción de Eventos Corporativos y Sociales</p>
     <h1 class="splash-title">THE NOISE<br>LAB</h1>
-    <p class="splash-subtitle">DJ · Productor · Organizador de Eventos</p>
-    <button id="splash-enter" class="splash-btn" aria-label="Entrar al sitio" onclick="var s=document.getElementById('splash');if(s){s.style.opacity='0';s.style.transform='scale(1.04)';s.style.pointerEvents='none';setTimeout(function(){s.remove()},800)}">
+    <p class="splash-subtitle">Más de tres décadas de experiencia en el espectáculo y el entretenimiento avalan nuestro compromiso con la excelencia.</p>
+    <button id="splash-enter" class="splash-btn" aria-label="Entrar al sitio"
+      onclick="var s=document.getElementById('splash');if(s){s.style.opacity='0';s.style.transform='scale(1.04)';s.style.pointerEvents='none';setTimeout(function(){s.remove()},800);sessionStorage.setItem('visited','1')}">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       Entrar
     </button>
@@ -35,211 +35,139 @@
 </div>
 
 <!-- NAVBAR -->
-<nav id="navbar" role="navigation" aria-label="Main navigation">
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
   <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Inicio</a></li>
     <li><a href="about.html">Sobre mí</a></li>
-    <li><a href="music.html">Música</a></li>
-    <li><a href="events.html">Eventos</a></li>
-    <li><a href="gallery.html">Galería</a></li>
+    <li><a href="corporativos.html">Corporativos</a></li>
+    <li><a href="empresariales.html">Empresariales</a></li>
+    <li><a href="talentos.html">Talentos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
   </ul>
   <a href="booking.html" class="nav-cta">Reservar</a>
-  <button class="nav-hamburger" aria-label="Toggle mobile menu">
+  <button class="nav-hamburger" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- MOBILE NAV -->
-<div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+<div class="nav-mobile" role="dialog" aria-label="Menú móvil">
   <a href="index.html">Inicio</a>
   <a href="about.html">Sobre mí</a>
-  <a href="music.html">Música</a>
-  <a href="events.html">Eventos</a>
-  <a href="gallery.html">Galería</a>
+  <a href="corporativos.html">Corporativos</a>
+  <a href="empresariales.html">Empresariales</a>
+  <a href="talentos.html">Talentos</a>
+  <a href="servicios.html">Servicios</a>
   <a href="booking.html">Reservar</a>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-bg-glow-1"></div>
-    <div class="hero-bg-glow-2"></div>
+<!-- HERO VIDEO FULL WIDTH -->
+<section class="hero-video-section">
+  <div class="hero-video-bg">
+    <video src="assets/hero.mp4" autoplay muted loop playsinline></video>
   </div>
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <div class="hero-tag reveal">
-          <span class="hero-tag-dot"></span>
-          Disponible para reservas 2026
-        </div>
-        <h1 class="hero-title reveal" data-delay="1">
-          <span class="line-1">THE NOISE</span>
-          <span class="line-2">LAB</span>
-        </h1>
-        <p class="hero-desc reveal" data-delay="2">
-          Creando paisajes sonoros en la intersección del techno, deep house y la electrónica experimental. Un explorador incansable del sonido, ritmo y atmósfera.
-        </p>
-        <div class="hero-btns reveal" data-delay="3">
-          <a href="music.html" class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
-            Escuchar
-          </a>
-          <a href="booking.html" class="btn btn-ghost">Reservar Show</a>
-        </div>
-        <div class="hero-stats reveal" data-delay="4">
-          <div>
-            <div class="hero-stat-num" data-count="200" data-suffix="+">0</div>
-            <div class="hero-stat-label">Shows Realizados</div>
-          </div>
-          <div>
-            <div class="hero-stat-num" data-count="40" data-suffix="+">0</div>
-            <div class="hero-stat-label">Países</div>
-          </div>
-          <div>
-            <div class="hero-stat-num" data-count="15" data-suffix="">0</div>
-            <div class="hero-stat-label">Lanzamientos</div>
-          </div>
-        </div>
+  </div>
+  <div class="hero-video-grid"></div>
+  <div class="hero-video-overlay"></div>
+  <div class="hero-video-content">
+    <div class="container">
+      <div class="hero-video-tag reveal">
+        <span class="hero-video-tag-dot"></span>
+        Disponible para reservas 2026
       </div>
-
-      <div class="hero-visual reveal reveal-right" data-delay="2">
-        <div class="hero-media-frame">
-          <div class="hero-media-placeholder">
-            <div class="hero-media-icon">
-              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5">
-                <polygon points="23 7 16 12 23 17 23 7"/>
-                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-              </svg>
-              <p style="font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:1rem">Video / Imagen</p>
-              <p style="font-size:.62rem;opacity:.35;margin-top:.4rem">Reemplaza el src en el HTML</p>
-            </div>
-            <div class="sound-wave" aria-hidden="true" style="position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%)">
-              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-              <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-            </div>
-          </div>
-          <!-- IMAGEN: <img src="foto.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"> -->
-          <!-- VIDEO:  <video src="clip.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;border-radius:inherit"></video> -->
-        </div>
+      <h1 class="hero-video-title reveal" data-delay="1">
+        <span class="line-1">THE NOISE</span>
+        <span class="line-2">LAB</span>
+      </h1>
+      <p class="hero-video-desc reveal" data-delay="2">
+        Creando paisajes sonoros en la intersección del techno, deep house y la electrónica experimental. Un explorador incansable del sonido, ritmo y atmósfera.
+      </p>
+      <div class="hero-video-btns reveal" data-delay="3">
+        <a href="servicios.html" class="btn btn-primary">Ver Servicios</a>
+        <a href="booking.html" class="btn btn-ghost">Reservar</a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- FEATURED TRACKS -->
-<section class="section tracks-section">
+<!-- DUO CAROUSEL: CORPORATIVOS + EMPRESARIALES -->
+<section class="cards-duo">
   <div class="container">
-    <div class="reveal"><span class="section-tag">Featured Música</span></div>
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
-      <h2 class="section-title reveal" data-delay="1">Latest <span>Lanzamientos</span></h2>
-      <a href="music.html" class="btn btn-ghost btn-sm reveal" data-delay="2">Ver Todo</a>
-    </div>
-    <div class="tracks-grid">
-      <div class="track-card reveal" data-delay="1">
-        <div class="track-cover" style="background:linear-gradient(135deg,#1a6fff22,#4f46e522)">
-          <span style="color:var(--neon-blue)">▲</span>
-        </div>
-        <div class="track-info">
-          <div class="track-name">Subsystem Protocol</div>
-          <div class="track-meta">Mezcla Original · 2026</div>
-        </div>
-        <button class="track-play" aria-label="Play Subsystem Protocol">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-      </div>
-      <div class="track-card reveal" data-delay="2">
-        <div class="track-cover" style="background:linear-gradient(135deg,#4f46e522,#818cf822)">
-          <span style="color:var(--neon-purple)">◆</span>
-        </div>
-        <div class="track-info">
-          <div class="track-name">Dark Matter EP</div>
-          <div class="track-meta">EP · 2025</div>
-        </div>
-        <button class="track-play" aria-label="Play Dark Matter EP">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-      </div>
-      <div class="track-card reveal" data-delay="3">
-        <div class="track-cover" style="background:linear-gradient(135deg,#1a6fff15,#00ffaa22)">
-          <span style="color:#00ffaa">●</span>
-        </div>
-        <div class="track-info">
-          <div class="track-name">Resonance Fields</div>
-          <div class="track-meta">Remix · 2025</div>
-        </div>
-        <button class="track-play" aria-label="Play Resonance Fields">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-      </div>
-      <div class="track-card reveal" data-delay="4">
-        <div class="track-cover" style="background:linear-gradient(135deg,#818cf822,#4f46e522)">
-          <span style="color:var(--neon-pink)">■</span>
-        </div>
-        <div class="track-info">
-          <div class="track-name">Temporal Drift</div>
-          <div class="track-meta">Mezcla Original · 2025</div>
-        </div>
-        <button class="track-play" aria-label="Play Temporal Drift">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="reveal"><span class="section-tag">Nuestras Áreas</span></div>
+    <h2 class="section-title reveal" data-delay="1">Explora <span>Nuestros Servicios</span></h2>
+    <p class="section-subtitle reveal" data-delay="2">Soluciones a medida para cada tipo de evento.</p>
 
-<div class="divider"></div>
+    <div class="cards-duo-grid">
 
-<!-- UPCOMING SHOWS -->
-<section class="section shows-section">
-  <div class="container">
-    <div class="reveal"><span class="section-tag">Fechas de Gira</span></div>
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
-      <h2 class="section-title reveal" data-delay="1">Próximos <span>Shows</span></h2>
-      <a href="events.html" class="btn btn-ghost btn-sm reveal" data-delay="2">All Eventos</a>
-    </div>
-    <div class="shows-list">
-      <div class="show-item reveal" data-delay="1">
-        <div class="show-date">APR 12<span>Saturday · 2026</span></div>
-        <div>
-          <div class="show-name">SUBSYSTEM 018</div>
-          <div class="show-venue">Tresor, Berlin, Germany</div>
+      <!-- CARD CORPORATIVOS -->
+      <div class="duo-card reveal" data-delay="1">
+        <div class="duo-carousel" id="carousel-corp">
+          <div class="duo-carousel-track" id="track-corp">
+            <div class="duo-carousel-slide placeholder-img" style="background:linear-gradient(135deg,#071630,#0a1d3e)">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(26,111,255,.2)" stroke-width="1"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+            </div>
+            <div class="duo-carousel-slide placeholder-img" style="background:linear-gradient(135deg,#0a1d3e,#071630)">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(26,111,255,.2)" stroke-width="1"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="duo-carousel-slide placeholder-img" style="background:linear-gradient(135deg,#051428,#071630)">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(26,111,255,.2)" stroke-width="1"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+          </div>
         </div>
-        <span class="show-tag sold-out">Agotado</span>
-        <a href="booking.html" class="btn btn-ghost btn-sm">Info</a>
-      </div>
-      <div class="show-item reveal" data-delay="2">
-        <div class="show-date">MAY 03<span>Saturday · 2026</span></div>
-        <div>
-          <div class="show-name">Ultra Música Festival</div>
-          <div class="show-venue">Bayfront Park, Miami, USA</div>
+        <div class="duo-card-overlay"></div>
+        <button class="duo-card-arrow prev" onclick="moveCarousel('corp',-1)" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="duo-card-arrow next" onclick="moveCarousel('corp',1)" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="duo-card-info">
+          <div class="duo-card-tag">Eventos Corporativos</div>
+          <div class="duo-card-title">Corporativos</div>
+          <div class="duo-card-desc">Experiencias sonoras diseñadas para lanzamientos de marca, conferencias y eventos empresariales de alto impacto.</div>
+          <a href="corporativos.html" class="btn btn-primary btn-sm">Ver más →</a>
         </div>
-        <span class="show-tag available">Entradas</span>
-        <a href="booking.html" class="btn btn-primary btn-sm">Comprar</a>
-      </div>
-      <div class="show-item reveal" data-delay="3">
-        <div class="show-date">MAY 24<span>Saturday · 2026</span></div>
-        <div>
-          <div class="show-name">Fabric London — Room 1</div>
-          <div class="show-venue">Fabric, London, UK</div>
+        <div class="duo-carousel-dots" id="dots-corp">
+          <button class="duo-dot active" onclick="goToSlide('corp',0)"></button>
+          <button class="duo-dot" onclick="goToSlide('corp',1)"></button>
+          <button class="duo-dot" onclick="goToSlide('corp',2)"></button>
         </div>
-        <span class="show-tag available">Entradas</span>
-        <a href="booking.html" class="btn btn-primary btn-sm">Comprar</a>
       </div>
-      <div class="show-item reveal" data-delay="4">
-        <div class="show-date">JUN 14<span>Saturday · 2026</span></div>
-        <div>
-          <div class="show-name">Awakenings Festival</div>
-          <div class="show-venue">Spaarnwoude, Amsterdam, NL</div>
+
+      <!-- CARD EMPRESARIALES -->
+      <div class="duo-card reveal" data-delay="2">
+        <div class="duo-carousel" id="carousel-emp">
+          <div class="duo-carousel-track" id="track-emp">
+            <div class="duo-carousel-slide placeholder-img" style="background:linear-gradient(135deg,#0a1d3e,#071630)">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(79,70,229,.2)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="duo-carousel-slide placeholder-img" style="background:linear-gradient(135deg,#071630,#0a1d3e)">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(79,70,229,.2)" stroke-width="1"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="duo-carousel-slide placeholder-img" style="background:linear-gradient(135deg,#051428,#0a1d3e)">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(79,70,229,.2)" stroke-width="1"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            </div>
+          </div>
         </div>
-        <span class="show-tag soon">Próximamente</span>
-        <a href="booking.html" class="btn btn-ghost btn-sm">Notificar</a>
+        <div class="duo-card-overlay"></div>
+        <button class="duo-card-arrow prev" onclick="moveCarousel('emp',-1)" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="duo-card-arrow next" onclick="moveCarousel('emp',1)" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="duo-card-info">
+          <div class="duo-card-tag">Entretenimiento Empresarial</div>
+          <div class="duo-card-title">Empresariales</div>
+          <div class="duo-card-desc">Sets exclusivos para fiestas de fin de año, teambuilding, premiaciones y celebraciones internas de empresa.</div>
+          <a href="empresariales.html" class="btn btn-purple btn-sm">Ver más →</a>
+        </div>
+        <div class="duo-carousel-dots" id="dots-emp">
+          <button class="duo-dot active" onclick="goToSlide('emp',0)"></button>
+          <button class="duo-dot" onclick="goToSlide('emp',1)"></button>
+          <button class="duo-dot" onclick="goToSlide('emp',2)"></button>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -249,10 +177,10 @@
 <!-- CTA BAND -->
 <section class="cta-band">
   <div class="container">
-    <span class="section-tag" style="justify-content:center">Reservass</span>
+    <span class="section-tag" style="justify-content:center">Reservas</span>
     <h2 class="section-title reveal">¿Listo para <span>Hacer Ruido?</span></h2>
     <p class="section-subtitle reveal" data-delay="1">
-      Disponible para noches de club, festivales, eventos corporativos y reservas privadas en todo el mundo. Creemos una experiencia inolvidable.
+      Disponible para eventos corporativos, empresariales, festivales y reservas privadas en todo el mundo.
     </p>
     <div class="btn-row reveal" data-delay="2">
       <a href="booking.html" class="btn btn-primary">Reservar The Noise Lab</a>
@@ -267,19 +195,16 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo">THE NOISE <span>LAB</span></div>
-        <p class="footer-desc">DJ · Productor · Organizador de Eventos pushing the boundaries of electronic music since 2018.</p>
+        <p class="footer-desc">Más de tres décadas de experiencia en el espectáculo y el entretenimiento avalan nuestro compromiso con la excelencia. empujando los límites de la música electrónica desde 2018.</p>
         <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
           <a href="#" class="social-btn" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="#" class="social-btn" aria-label="SoundCloud">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 13.5C1 15.4 2.6 17 4.5 17H18a4 4 0 000-8 4.5 4.5 0 00-8.5 1.5A3 3 0 001 13.5z"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="Spotify">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93zm1.24-2.76c-.25.4-.78.52-1.18.27-2.92-1.79-7.37-2.31-10.82-1.26-.45.13-.92-.12-1.05-.57-.13-.45.12-.92.57-1.05 3.95-1.2 8.85-.62 12.21 1.43.4.25.52.78.27 1.18zm.11-2.87c-3.5-2.08-9.28-2.27-12.62-1.26-.54.16-1.1-.14-1.27-.68-.16-.54.14-1.1.68-1.27 3.84-1.17 10.22-.94 14.26 1.45.49.29.65.91.36 1.4-.29.49-.91.65-1.4.36z"/></svg>
+          <a href="#" class="social-btn" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
           </a>
         </div>
       </div>
@@ -288,10 +213,10 @@
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="about.html">Sobre mí</a></li>
-          <li><a href="music.html">Música</a></li>
-          <li><a href="events.html">Eventos</a></li>
-          <li><a href="gallery.html">Galería</a></li>
-          <li><a href="booking.html">Reservas</a></li>
+          <li><a href="corporativos.html">Corporativos</a></li>
+          <li><a href="empresariales.html">Empresariales</a></li>
+          <li><a href="talentos.html">Talentos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -300,27 +225,41 @@
           <li><a href="#">Spotify</a></li>
           <li><a href="#">SoundCloud</a></li>
           <li><a href="#">Beatport</a></li>
-          <li><a href="#">Apple Música</a></li>
+          <li><a href="#">Apple Music</a></li>
           <li><a href="#">YouTube</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
         <ul>
-          <li><a href="/cdn-cgi/l/email-protection#b0d2dfdfdbd9ded7c3f0c4d8d5dedfd9c3d5dcd1d29ed3dfdd"><span class="__cf_email__" data-cfemail="9cfef3f3f7f5f2fbefdce8f4f9f2f3f5eff9f0fdfeb2fff3f1">[email&#160;protected]</span></a></li>
-          <li><a href="/cdn-cgi/l/email-protection#b9c9cbdccacaf9cdd1dcd7d6d0cadcd5d8db97dad6d4"><span class="__cf_email__" data-cfemail="1f6f6d7a6c6c5f6b777a7170766c7a737e7d317c7072">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#2a4845454143444d596a5e424f444543594f464b4804494547"><span class="__cf_email__" data-cfemail="f89a97979391969f8bb88c909d9697918b9d94999ad69b9795">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#0f7f7d6a7c7c4f7b676a6160667c6a636e6d216c6062"><span class="__cf_email__" data-cfemail="52222037212112263a373c3d3b21373e33307c313d3f">[email&#160;protected]</span></a></li>
           <li><a href="#">Kit de Prensa</a></li>
           <li><a href="#">Rider Técnico</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 The Noise Lab. All los derechos reservados.</span>
+      <span>© 2026 The Noise Lab. Todos los derechos reservados.</span>
       <span>Empujando fronteras sónicas en todo el mundo.</span>
     </div>
   </div>
 </footer>
-</div>
-  <script src="js/script.js"></script>
-</body>
-</html>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/script.js"></script>
+<script>
+// Carrusel dos columnas
+var carousels = {};
+function initCarousel(id, total) {
+  carousels[id] = { current: 0, total: total };
+}
+function updateCarousel(id) {
+  var c = carousels[id]; if (!c) return;
+  var track = document.getElementById('track-' + id);
+  if (track) track.style.transform = 'translateX(-' + (c.current * 100) + '%)';
+  var dots = document.querySelectorAll('#dots-' + id + ' .duo-dot');
+  dots.forEach(function(d, i) { d.classList.toggle('active', i === c.current); });
+}
+function moveCarousel(id, dir) {
+  var c = carousels[id]; if (!c) return;
+  c.cur

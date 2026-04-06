@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Empresariales — The Noise Lab</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="page-transition"></div>
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="about.html">Sobre mí</a></li>
+    <li><a href="corporativos.html">Corporativos</a></li>
+    <li><a href="empresariales.html" class="active">Empresariales</a></li>
+    <li><a href="talentos.html">Talentos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+  </ul>
+  <a href="booking.html" class="nav-cta">Reservar</a>
+  <button class="nav-hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" role="dialog" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="about.html">Sobre mí</a>
+  <a href="corporativos.html">Corporativos</a>
+  <a href="empresariales.html">Empresariales</a>
+  <a href="talentos.html">Talentos</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="booking.html">Reservar</a>
+</div>
+<div id="lightbox" role="dialog" aria-label="Visor de imagen">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox-content">
+    <div class="lightbox-img-placeholder">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <span>Imagen</span>
+    </div>
+    <button class="lightbox-close" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <button class="lightbox-prev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button class="lightbox-next" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+    <div class="lightbox-counter"></div>
+  </div>
+</div>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-inner">
+    <div class="reveal"><span class="section-tag">Entretenimiento Empresarial</span></div>
+    <h1 class="page-hero-title reveal" data-delay="1">Eventos <span>Empresariales</span></h1>
+    <p class="section-subtitle reveal" data-delay="2">Experiencias diseñadas para celebrar y motivar a tu equipo.</p>
+  </div>
+</section>
+<section class="section" style="background:var(--bg-0)">
+  <div class="container">
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="fiesta">Fiestas</button>
+      <button class="filter-btn" data-filter="teambuilding">Team Building</button>
+      <button class="filter-btn" data-filter="premiacion">Premiaciones</button>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide reveal" data-delay="1" data-cat="fiesta">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#4f46e514,#1a6fff12)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Fiesta de Fin de Año</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+      <div class="gallery-item reveal" data-delay="2" data-cat="teambuilding">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a6fff12,#4f46e512)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Team Building</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+      <div class="gallery-item tall reveal" data-delay="3" data-cat="premiacion">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#4f46e512,#071630)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Ceremonia de Premiación</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+      <div class="gallery-item reveal" data-delay="4" data-cat="fiesta">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#071630,#1a6fff10)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Celebración Interna</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+      <div class="gallery-item reveal" data-delay="5" data-cat="teambuilding">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a6fff10,#4f46e514)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Retiro de Empresa</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+      <div class="gallery-item wide reveal" data-delay="6" data-cat="premiacion">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#4f46e510,#1a6fff12)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Gala de Premios</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+      <div class="gallery-item reveal" data-delay="1" data-cat="fiesta">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#071630,#4f46e512)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Aniversario Empresa</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+      <div class="gallery-item reveal" data-delay="2" data-cat="teambuilding">
+        <div class="gallery-inner">
+          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a6fff12,#051428)">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Kick-off Anual</span>
+          </div>
+        </div>
+        <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-band">
+  <div class="container">
+    <span class="section-tag" style="justify-content:center">Contacto</span>
+    <h2 class="section-title reveal">¿Listo para <span>Hacer Ruido?</span></h2>
+    <p class="section-subtitle reveal" data-delay="1">Hablemos de tu próximo evento.</p>
+    <div class="btn-row reveal" data-delay="2">
+      <a href="booking.html" class="btn btn-primary">Reservar</a>
+      <a href="about.html" class="btn btn-ghost">Saber Más</a>
+    </div>
+  </div>
+</section>
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">THE NOISE <span>LAB</span></div>
+        <p class="footer-desc">DJ · Productor · Organizador de Eventos empujando los límites de la música electrónica desde 2018.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93zm1.24-2.76c-.25.4-.78.52-1.18.27-2.92-1.79-7.37-2.31-10.82-1.26-.45.13-.92-.12-1.05-.57-.13-.45.12-.92.57-1.05 3.95-1.2 8.85-.62 12.21 1.43.4.25.52.78.27 1.18zm.11-2.87c-3.5-2.08-9.28-2.27-12.62-1.26-.54.16-1.1-.14-1.27-.68-.16-.54.14-1.1.68-1.27 3.84-1.17 10.22-.94 14.26 1.45.49.29.65.91.36 1.4-.29.49-.91.65-1.4.36z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navegación</h4><ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Sobre mí</a></li>
+        <li><a href="corporativos.html">Corporativos</a></li>
+        <li><a href="empresariales.html">Empresariales</a></li>
+        <li><a href="talentos.html">Talentos</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul>
+        <li><a href="mailto:bookings@thenoiselab.com">bookings@thenoiselab.com</a></li>
+        <li><a href="#">Kit de Prensa</a></li>
+        <li><a href="#">Rider Técnico</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Noise Lab. Todos los derechos reservados.</span>
+      <span>Empujando fronteras sónicas en todo el mundo.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

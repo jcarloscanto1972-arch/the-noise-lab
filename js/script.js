@@ -78,6 +78,7 @@
 
     function enterSite() {
       splash.classList.add('hide');
+      sessionStorage.setItem('visited', '1');
       setTimeout(() => splash.remove(), 900);
     }
 
