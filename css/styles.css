@@ -757,12 +757,13 @@ footer { background: var(--bg-0); border-top: 1px solid var(--border); padding: 
   background: linear-gradient(to top, rgba(2,11,26,.92) 0%, rgba(2,11,26,.2) 60%, transparent 100%);
 }
 /* Carrusel interior */
-.duo-carousel { position: absolute; inset: 0; }
+.duo-carousel { position: absolute; inset: 0; overflow: hidden; }
 .duo-carousel-track { display: flex; height: 100%; transition: transform .6s ease; }
 .duo-carousel-slide {
   min-width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
   font-family: var(--ff-head); font-size: 6rem; color: rgba(255,255,255,.06);
+  position: relative; flex-shrink: 0;
 }
 .duo-carousel-slide.placeholder-img {
   background: var(--bg-card);

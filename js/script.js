@@ -206,20 +206,35 @@
   /* ── LIGHTBOX ──────────────────────────────────────────── */
   const lightbox = document.getElementById('lightbox');
   if (lightbox) {
-    const imgPlaceholder = lightbox.querySelector('.lightbox-img-placeholder');
-    const counter = lightbox.querySelector('.lightbox-counter');
-    const items = Array.from(galleryItems);
+    const counter  = lightbox.querySelector('.lightbox-counter');
+    const imgWrap  = lightbox.querySelector('.lightbox-img-placeholder');
+    const items    = Array.from(galleryItems);
     let currentIndex = 0;
 
     function openLightbox(index) {
       currentIndex = index;
       const item = items[index];
-      const label = item.querySelector('.gallery-placeholder') 
-        ? item.querySelector('.gallery-placeholder').textContent.trim()
-        : `Photo ${index + 1}`;
-      if (imgPlaceholder) {
-        imgPlaceholder.querySelector('span') && (imgPlaceholder.querySelector('span').textContent = label);
+
+      // Get image src from the gallery item
+      const img = item.querySelector('img');
+      const src = img ? img.src : null;
+      const alt = img ? img.alt : '';
+
+      // Clear and rebuild lightbox content
+      if (imgWrap) {
+        imgWrap.innerHTML = '';
+        if (src) {
+          const el = document.createElement('img');
+          el.src = src;
+          el.alt = alt;
+          el.style.cssText = 'max-width:100%;max-height:80vh;border-radius:12px;display:block;object-fit:contain;';
+          imgWrap.appendChild(el);
+          imgWrap.style.cssText = 'display:flex;align-items:center;justify-content:center;background:transparent;border:none;';
+        } else {
+          imgWrap.innerHTML = '<span style="color:#fff;opacity:.4">Sin imagen</span>';
+        }
       }
+
       if (counter) counter.textContent = `${index + 1} / ${items.length}`;
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -249,7 +264,7 @@
 
     document.addEventListener('keydown', e => {
       if (!lightbox.classList.contains('open')) return;
-      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'Escape')     closeLightbox();
       if (e.key === 'ArrowLeft')  openLightbox((currentIndex - 1 + items.length) % items.length);
       if (e.key === 'ArrowRight') openLightbox((currentIndex + 1) % items.length);
     });

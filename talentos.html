@@ -24,9 +24,7 @@
     <li><a href="servicios.html">Servicios</a></li>
   </ul>
   <a href="booking.html" class="nav-cta">Reservar</a>
-  <button class="nav-hamburger" aria-label="Abrir menú">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile" role="dialog" aria-label="Menú móvil">
   <a href="index.html">Inicio</a>
@@ -36,6 +34,19 @@
   <a href="talentos.html">Talentos</a>
   <a href="servicios.html">Servicios</a>
   <a href="booking.html">Reservar</a>
+</div>
+<div id="lightbox" role="dialog" aria-label="Visor">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox-content">
+    <div class="lightbox-img-placeholder">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      <span>Imagen</span>
+    </div>
+    <button class="lightbox-close" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <button class="lightbox-prev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button class="lightbox-next" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+    <div class="lightbox-counter"></div>
+  </div>
 </div>
 <section class="page-hero">
   <div class="page-hero-bg"></div>
@@ -49,60 +60,45 @@
 <section class="section" style="background:var(--bg-0)">
   <div class="container">
     <div class="gallery-filters reveal">
-      <button class="filter-btn active" data-filter="all">Todos</button><button class="filter-btn" data-filter="dj">DJ</button><button class="filter-btn" data-filter="productor">Producción</button><button class="filter-btn" data-filter="live">Live</button>
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="dj">DJ</button>
+      <button class="filter-btn" data-filter="productor">Producción</button>
+      <button class="filter-btn" data-filter="live">Live</button>
     </div>
     <div class="gallery-grid">
       <div class="gallery-item wide reveal" data-delay="1" data-cat="dj">
         <div class="gallery-inner">
-          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a6fff14,#4f46e512)">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>DJ Sets</span>
-          </div>
+          <img src="assets/tal-gal-1.jpg" alt="DJ Sets" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;">
         </div>
         <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
       </div>
       <div class="gallery-item reveal" data-delay="2" data-cat="productor">
         <div class="gallery-inner">
-          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#4f46e512,#1a6fff10)">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Producción Musical</span>
-          </div>
+          <img src="assets/tal-gal-2.jpg" alt="Producción Musical" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;">
         </div>
         <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
       </div>
       <div class="gallery-item tall reveal" data-delay="3" data-cat="live">
         <div class="gallery-inner">
-          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#071630,#1a6fff12)">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Live Performance</span>
-          </div>
+          <img src="assets/tal-gal-3.jpg" alt="Live Performance" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;">
         </div>
         <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
       </div>
       <div class="gallery-item reveal" data-delay="4" data-cat="dj">
         <div class="gallery-inner">
-          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a6fff10,#4f46e510)">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Set Techno</span>
-          </div>
+          <img src="assets/tal-gal-4.jpg" alt="Set Techno" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;">
         </div>
         <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
       </div>
       <div class="gallery-item reveal" data-delay="5" data-cat="productor">
         <div class="gallery-inner">
-          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#4f46e514,#1a6fff10)">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Estudio</span>
-          </div>
+          <img src="assets/tal-gal-5.jpg" alt="Estudio" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;">
         </div>
         <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
       </div>
       <div class="gallery-item wide reveal" data-delay="6" data-cat="live">
         <div class="gallery-inner">
-          <div class="gallery-placeholder" style="background:linear-gradient(135deg,#1a6fff12,#4f46e512)">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span>Modular Live</span>
-          </div>
+          <img src="assets/tal-gal-6.jpg" alt="Modular Live" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;">
         </div>
         <div class="gallery-hover"><span class="gallery-hover-text">Ver</span></div>
       </div>
@@ -127,9 +123,15 @@
         <div class="footer-logo">THE NOISE <span>LAB</span></div>
         <p class="footer-desc">DJ · Productor · Organizador de Eventos empujando los límites de la música electrónica desde 2018.</p>
         <div class="footer-socials">
-          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg></a>
-          <a href="#" class="social-btn" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93zm1.24-2.76c-.25.4-.78.52-1.18.27-2.92-1.79-7.37-2.31-10.82-1.26-.45.13-.92-.12-1.05-.57-.13-.45.12-.92.57-1.05 3.95-1.2 8.85-.62 12.21 1.43.4.25.52.78.27 1.18zm.11-2.87c-3.5-2.08-9.28-2.27-12.62-1.26-.54.16-1.1-.14-1.27-.68-.16-.54.14-1.1.68-1.27 3.84-1.17 10.22-.94 14.26 1.45.49.29.65.91.36 1.4-.29.49-.91.65-1.4.36z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+          </a>
         </div>
       </div>
       <div class="footer-col"><h4>Navegación</h4><ul>
