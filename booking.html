@@ -18,29 +18,74 @@
 <div id="page-transition"></div>
 
 <!-- NAVBAR -->
-<nav id="navbar" role="navigation" aria-label="Main navigation">
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
   <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="about.html">Sobre mí</a></li>
-    <li><a href="corporativos.html">Corporativos</a></li>
-    <li><a href="empresariales.html">Empresariales</a></li>
-    <li><a href="talentos.html">Talentos</a></li>
+    <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
+    <li class="nav-accordion">
+      <button class="nav-accordion-btn" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
+      <ul class="nav-accordion-menu">
+        <li><a href="empresariales.html">• Eventos Empresariales</a></li>
+        <li><a href="corporativos.html">• Corporativos</a></li>
+      </ul>
+    </li>
+    <li class="nav-accordion">
+      <button class="nav-accordion-btn" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+      <ul class="nav-accordion-menu">
+        <li><a href="talentos.html">• Talentos</a></li>
+        <li><a href="shows.html">• Shows</a></li>
+        <li><a href="happenings.html">• Happenings</a></li>
+      </ul>
+    </li>
     <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="about.html">Sobre Nosotros</a></li>
+    <li><a href="booking.html" class="active">Contacto</a></li>
   </ul>
-  <a href="booking.html" class="nav-cta active">Reservar</a>
-  <button class="nav-hamburger" aria-label="Toggle mobile menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile" role="dialog" aria-label="Menú móvil">
   <a href="index.html">Inicio</a>
-  <a href="about.html">Sobre mí</a>
-  <a href="corporativos.html">Corporativos</a>
-  <a href="empresariales.html">Empresariales</a>
-  <a href="talentos.html">Talentos</a>
+  <a href="eventos-sociales.html">Eventos Sociales</a>
+  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+    <a href="empresariales.html" class="nav-mobile-sub">• Eventos Empresariales</a>
+    <a href="corporativos.html" class="nav-mobile-sub">• Corporativos</a>
+  </div>
+  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+    <a href="talentos.html" class="nav-mobile-sub">• Talentos</a>
+    <a href="shows.html" class="nav-mobile-sub">• Shows</a>
+    <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
+  </div>
   <a href="servicios.html">Servicios</a>
-  <a href="booking.html">Reservar</a>
+  <a href="about.html">Sobre Nosotros</a>
+  <a href="booking.html">Contacto</a>
+</div>
+
+  <button class="nav-mobile-accordion" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+  <a href="shows.html" class="nav-mobile-sub">• Shows</a>
+  <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
+  </div>
+  <a href="servicios.html">Servicios</a>
+  <a href="about.html">Sobre Nosotros</a>
+  <a href="booking.html">Contacto</a>
+</div>
+
+  <a href="servicios.html">Servicios</a>
+  <a href="about.html">Sobre Nosotros</a>
+  <a href="booking.html">Contacto</a>
+</div>
+
+  <button class="nav-mobile-accordion" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+    <a href="shows.html" class="nav-mobile-sub">• Shows</a>
+    <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
+  </div>
+  <a href="servicios.html">Servicios</a>
+  <a href="about.html">Sobre Nosotros</a>
+  <a href="booking.html">Contacto</a>
 </div>
 
 <!-- PAGE HERO -->
@@ -219,17 +264,14 @@
         <div class="footer-logo">THE NOISE <span>LAB</span></div>
         <p class="footer-desc">DJ · Productor · Organizador de Eventos pushing the boundaries of electronic music since 2018.</p>
         <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
           <a href="#" class="social-btn" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="#" class="social-btn" aria-label="SoundCloud">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 13.5C1 15.4 2.6 17 4.5 17H18a4 4 0 000-8 4.5 4.5 0 00-8.5 1.5A3 3 0 001 13.5z"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.9-2c-.8-.9-1.8-.9-2.2-.9C16 4.1 12 4.1 12 4.1s-4 0-6.5.2c-.4 0-1.4 0-2.2.9-.7.6-.9 2-.9 2S2.1 8.8 2.1 10.4v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.9 2c.8.9 1.9.8 2.4.9C7.1 18 12 18 12 18s4 0 6.5-.3c.4 0 1.4 0 2.2-.9.7-.6.9-2 .9-2s.2-1.6.2-3.2v-1.5c0-1.6-.2-3.2-.2-3.2zM10 14.6V9.4l5.5 2.6-5.5 2.6z"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="Spotify">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 14.36c-.2.32-.61.42-.93.22-2.55-1.56-5.76-1.91-9.53-1.05-.37.09-.73-.14-.82-.5-.09-.37.14-.73.5-.82 4.13-.94 7.67-.53 10.52 1.21.32.2.42.61.22.93zm1.24-2.76c-.25.4-.78.52-1.18.27-2.92-1.79-7.37-2.31-10.82-1.26-.45.13-.92-.12-1.05-.57-.13-.45.12-.92.57-1.05 3.95-1.2 8.85-.62 12.21 1.43.4.25.52.78.27 1.18zm.11-2.87c-3.5-2.08-9.28-2.27-12.62-1.26-.54.16-1.1-.14-1.27-.68-.16-.54.14-1.1.68-1.27 3.84-1.17 10.22-.94 14.26 1.45.49.29.65.91.36 1.4-.29.49-.91.65-1.4.36z"/></svg>
+          <a href="#" class="social-btn" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
           </a>
         </div>
       </div>

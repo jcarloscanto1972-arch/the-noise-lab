@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Noise Lab — DJ · Productor · Organizador de Eventos</title>
+  <title>The Noise Lab — Producción de Eventos</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -16,15 +16,15 @@
 <div id="page-transition"></div>
 
 <!-- SPLASH -->
-<div id="splash" role="dialog" aria-label="Bienvenido a The Noise Lab">
+<div id="splash" role="dialog" aria-label="Bienvenido">
   <div class="splash-particles"></div>
   <div class="splash-grid"></div>
   <div class="splash-glow"></div>
   <div class="splash-content">
-    <p class="splash-label">Música Electrónica</p>
+    <p class="splash-label">Producción de Eventos Corporativos y Sociales</p>
     <h1 class="splash-title">THE NOISE<br>LAB</h1>
-    <p class="splash-subtitle">DJ · Productor · Organizador de Eventos</p>
-    <button id="splash-enter" class="splash-btn" aria-label="Entrar al sitio"
+    <p class="splash-subtitle">Más de 30 años de experiencia en el mundo del espectáculo y el entretenimiento nos respaldan!</p>
+    <button id="splash-enter" class="splash-btn" type="button" aria-label="Entrar"
       onclick="var s=document.getElementById('splash');if(s){s.style.opacity='0';s.style.transform='scale(1.04)';s.style.pointerEvents='none';sessionStorage.setItem('visited','1');setTimeout(function(){s.remove()},800)}">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       Entrar
@@ -33,31 +33,52 @@
   <div class="splash-progress"><div class="splash-progress-bar"></div></div>
 </div>
 
-<!-- NAVBAR -->
 <nav id="navbar" role="navigation" aria-label="Navegación principal">
   <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Inicio</a></li>
-    <li><a href="about.html">Sobre mí</a></li>
-    <li><a href="corporativos.html">Corporativos</a></li>
-    <li><a href="empresariales.html">Empresariales</a></li>
-    <li><a href="talentos.html">Talentos</a></li>
+    <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
+    <li class="nav-accordion">
+      <button class="nav-accordion-btn" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
+      <ul class="nav-accordion-menu">
+        <li><a href="empresariales.html">• Eventos Empresariales</a></li>
+        <li><a href="corporativos.html">• Corporativos</a></li>
+      </ul>
+    </li>
+    <li class="nav-accordion">
+      <button class="nav-accordion-btn" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+      <ul class="nav-accordion-menu">
+        <li><a href="talentos.html">• Talentos</a></li>
+        <li><a href="shows.html">• Shows</a></li>
+        <li><a href="happenings.html">• Happenings</a></li>
+      </ul>
+    </li>
     <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="about.html">Sobre Nosotros</a></li>
+    <li><a href="booking.html">Contacto</a></li>
   </ul>
-  <a href="booking.html" class="nav-cta">Reservar</a>
-  <button class="nav-hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile" role="dialog" aria-label="Menú móvil">
   <a href="index.html">Inicio</a>
-  <a href="about.html">Sobre mí</a>
-  <a href="corporativos.html">Corporativos</a>
-  <a href="empresariales.html">Empresariales</a>
-  <a href="talentos.html">Talentos</a>
+  <a href="eventos-sociales.html">Eventos Sociales</a>
+  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+    <a href="empresariales.html" class="nav-mobile-sub">• Eventos Empresariales</a>
+    <a href="corporativos.html" class="nav-mobile-sub">• Corporativos</a>
+  </div>
+  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+    <a href="talentos.html" class="nav-mobile-sub">• Talentos</a>
+    <a href="shows.html" class="nav-mobile-sub">• Shows</a>
+    <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
+  </div>
   <a href="servicios.html">Servicios</a>
-  <a href="booking.html">Reservar</a>
+  <a href="about.html">Sobre Nosotros</a>
+  <a href="booking.html">Contacto</a>
 </div>
 
-<!-- HERO VIDEO FULL WIDTH -->
+<!-- HERO VIDEO -->
 <section class="hero-video-section">
   <div class="hero-video-bg">
     <video src="assets/hero.mp4" autoplay muted loop playsinline></video>
@@ -66,17 +87,12 @@
   <div class="hero-video-overlay"></div>
   <div class="hero-video-content">
     <div class="container">
-      <div class="hero-video-tag reveal">
-        <span class="hero-video-tag-dot"></span>
-        Disponible para reservas 2026
-      </div>
+      <div class="hero-video-tag reveal"><span class="hero-video-tag-dot"></span>Disponible para reservas 2026</div>
       <h1 class="hero-video-title reveal" data-delay="1">
         <span class="line-1">THE NOISE</span>
         <span class="line-2">LAB</span>
       </h1>
-      <p class="hero-video-desc reveal" data-delay="2">
-        Creando paisajes sonoros en la intersección del techno, deep house y la electrónica experimental.
-      </p>
+      <p class="hero-video-desc reveal" data-delay="2">Más de 30 años de experiencia en el mundo del espectáculo y el entretenimiento nos respaldan.</p>
       <div class="hero-video-btns reveal" data-delay="3">
         <a href="servicios.html" class="btn btn-primary">Ver Servicios</a>
         <a href="booking.html" class="btn btn-ghost">Reservar</a>
@@ -93,26 +109,25 @@
     <p class="section-subtitle reveal" data-delay="2">Soluciones a medida para cada tipo de evento.</p>
     <div class="cards-duo-grid">
 
-      <!-- CORPORATIVOS -->
-      <div class="duo-card reveal" data-delay="1" id="card-corp">
+      <div class="duo-card reveal" data-delay="1">
         <div class="duo-carousel">
           <div class="duo-carousel-track" id="track-corp">
-            <div class="duo-carousel-slide placeholder-img">
+            <div class="duo-carousel-slide placeholder-img" style="position:relative">
               <img src="assets/corp-1.jpg" alt="Corporativos 1" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             </div>
-            <div class="duo-carousel-slide placeholder-img">
+            <div class="duo-carousel-slide placeholder-img" style="position:relative">
               <img src="assets/corp-2.jpg" alt="Corporativos 2" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             </div>
-            <div class="duo-carousel-slide placeholder-img">
+            <div class="duo-carousel-slide placeholder-img" style="position:relative">
               <img src="assets/corp-3.jpg" alt="Corporativos 3" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             </div>
           </div>
         </div>
         <div class="duo-card-overlay"></div>
-        <button class="duo-card-arrow prev" data-id="corp" aria-label="Anterior">
+        <button type="button" class="duo-card-arrow prev" data-id="corp" aria-label="Anterior">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
-        <button class="duo-card-arrow next" data-id="corp" aria-label="Siguiente">
+        <button type="button" class="duo-card-arrow next" data-id="corp" aria-label="Siguiente">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
         <div class="duo-card-info">
@@ -122,44 +137,43 @@
           <a href="corporativos.html" class="btn btn-primary btn-sm">Ver más →</a>
         </div>
         <div class="duo-carousel-dots" id="dots-corp">
-          <button class="duo-dot active" data-id="corp" data-idx="0"></button>
-          <button class="duo-dot" data-id="corp" data-idx="1"></button>
-          <button class="duo-dot" data-id="corp" data-idx="2"></button>
+          <button type="button" class="duo-dot active" data-id="corp" data-idx="0"></button>
+          <button type="button" class="duo-dot" data-id="corp" data-idx="1"></button>
+          <button type="button" class="duo-dot" data-id="corp" data-idx="2"></button>
         </div>
       </div>
 
-      <!-- EMPRESARIALES -->
-      <div class="duo-card reveal" data-delay="2" id="card-emp">
+      <div class="duo-card reveal" data-delay="2">
         <div class="duo-carousel">
           <div class="duo-carousel-track" id="track-emp">
-            <div class="duo-carousel-slide placeholder-img">
+            <div class="duo-carousel-slide placeholder-img" style="position:relative">
               <img src="assets/emp-1.jpg" alt="Empresariales 1" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             </div>
-            <div class="duo-carousel-slide placeholder-img">
+            <div class="duo-carousel-slide placeholder-img" style="position:relative">
               <img src="assets/emp-2.jpg" alt="Empresariales 2" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             </div>
-            <div class="duo-carousel-slide placeholder-img">
+            <div class="duo-carousel-slide placeholder-img" style="position:relative">
               <img src="assets/emp-3.jpg" alt="Empresariales 3" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
             </div>
           </div>
         </div>
         <div class="duo-card-overlay"></div>
-        <button class="duo-card-arrow prev" data-id="emp" aria-label="Anterior">
+        <button type="button" class="duo-card-arrow prev" data-id="emp" aria-label="Anterior">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
-        <button class="duo-card-arrow next" data-id="emp" aria-label="Siguiente">
+        <button type="button" class="duo-card-arrow next" data-id="emp" aria-label="Siguiente">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
         <div class="duo-card-info">
           <div class="duo-card-tag">Entretenimiento Empresarial</div>
           <div class="duo-card-title">Empresariales</div>
-          <div class="duo-card-desc">Sets exclusivos para fiestas de fin de año, teambuilding, premiaciones y celebraciones internas.</div>
+          <div class="duo-card-desc">Sets exclusivos para fiestas, teambuilding, premiaciones y celebraciones internas.</div>
           <a href="empresariales.html" class="btn btn-purple btn-sm">Ver más →</a>
         </div>
         <div class="duo-carousel-dots" id="dots-emp">
-          <button class="duo-dot active" data-id="emp" data-idx="0"></button>
-          <button class="duo-dot" data-id="emp" data-idx="1"></button>
-          <button class="duo-dot" data-id="emp" data-idx="2"></button>
+          <button type="button" class="duo-dot active" data-id="emp" data-idx="0"></button>
+          <button type="button" class="duo-dot" data-id="emp" data-idx="1"></button>
+          <button type="button" class="duo-dot" data-id="emp" data-idx="2"></button>
         </div>
       </div>
 
@@ -169,50 +183,45 @@
 
 <div class="divider"></div>
 
-<!-- CTA -->
 <section class="cta-band">
   <div class="container">
     <span class="section-tag" style="justify-content:center">Reservas</span>
-    <h2 class="section-title reveal">¿Listo para <span>Hacer Ruido?</span></h2>
-    <p class="section-subtitle reveal" data-delay="1">Disponible para eventos corporativos, empresariales, festivales y reservas privadas en todo el mundo.</p>
+    <h2 class="section-title reveal">¿Listo para <span>tu evento?</span></h2>
+    <p class="section-subtitle reveal" data-delay="1">Hablemos y hagámoslo realidad.</p>
     <div class="btn-row reveal" data-delay="2">
-      <a href="booking.html" class="btn btn-primary">Reservar The Noise Lab</a>
+      <a href="booking.html" class="btn btn-primary">Contáctanos</a>
       <a href="about.html" class="btn btn-ghost">Saber Más</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-logo">THE NOISE <span>LAB</span></div>
-        <p class="footer-desc">DJ · Productor · Organizador de Eventos empujando los límites de la música electrónica desde 2018.</p>
+        <p class="footer-desc">Más de 30 años de experiencia en el mundo del espectáculo y el entretenimiento nos respaldan.</p>
         <div class="footer-socials">
-          <a href="#" class="social-btn" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
-          </a>
+          <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg></a>
         </div>
       </div>
       <div class="footer-col"><h4>Navegación</h4><ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Sobre mí</a></li>
-        <li><a href="corporativos.html">Corporativos</a></li>
-        <li><a href="empresariales.html">Empresariales</a></li>
+        <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
+        <li><a href="empresariales.html">Eventos Empresariales</a></li>
+        <li><a href="corporativos.html">• Corporativos</a></li>
         <li><a href="talentos.html">Talentos</a></li>
+        <li><a href="shows.html">• Shows</a></li>
+        <li><a href="happenings.html">• Happenings</a></li>
         <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="about.html">Sobre Nosotros</a></li>
+        <li><a href="booking.html">Contacto</a></li>
       </ul></div>
       <div class="footer-col"><h4>Contacto</h4><ul>
-        <li><a href="mailto:bookings@thenoiselab.com">bookings@thenoiselab.com</a></li>
-        <li><a href="#">Kit de Prensa</a></li>
-        <li><a href="#">Rider Técnico</a></li>
+        <li><a href="mailto:info@thenoiselab.com">info@thenoiselab.com</a></li>
+        <li><a href="booking.html">Reservar</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
@@ -224,34 +233,30 @@
 
 <script src="js/script.js"></script>
 <script>
-// ── CAROUSEL ──────────────────────────────────────────────────
-var carState = { corp: { cur: 0, total: 3 }, emp: { cur: 0, total: 3 } };
-
-function goSlide(id, idx) {
-  carState[id].cur = (idx + carState[id].total) % carState[id].total;
-  var track = document.getElementById('track-' + id);
-  if (track) track.style.transform = 'translateX(-' + (carState[id].cur * 100) + '%)';
+/* Carousel */
+var carState = {corp:{cur:0,total:3}, emp:{cur:0,total:3}};
+function goSlide(id,idx) {
+  var s = carState[id];
+  s.cur = (idx % s.total + s.total) % s.total;
+  var t = document.getElementById('track-' + id);
+  if (t) t.style.transform = 'translateX(-' + (s.cur * 100) + '%)';
   document.querySelectorAll('[data-id="' + id + '"].duo-dot').forEach(function(d) {
-    d.classList.toggle('active', parseInt(d.dataset.idx) === carState[id].cur);
+    d.classList.toggle('active', parseInt(d.dataset.idx) === s.cur);
   });
 }
-
-document.querySelectorAll('.duo-card-arrow').forEach(function(btn) {
-  btn.addEventListener('click', function(e) {
+document.querySelectorAll('.duo-card-arrow').forEach(function(b) {
+  b.addEventListener('click', function(e) {
     e.stopPropagation();
-    var id  = this.dataset.id;
-    var dir = this.classList.contains('prev') ? -1 : 1;
-    goSlide(id, carState[id].cur + dir);
+    var id = this.dataset.id;
+    goSlide(id, carState[id].cur + (this.classList.contains('prev') ? -1 : 1));
   });
 });
-
-document.querySelectorAll('.duo-dot').forEach(function(dot) {
-  dot.addEventListener('click', function(e) {
+document.querySelectorAll('.duo-dot').forEach(function(d) {
+  d.addEventListener('click', function(e) {
     e.stopPropagation();
     goSlide(this.dataset.id, parseInt(this.dataset.idx));
   });
 });
-
 setInterval(function() { goSlide('corp', carState.corp.cur + 1); }, 4000);
 setInterval(function() { goSlide('emp',  carState.emp.cur  + 1); }, 5000);
 </script>

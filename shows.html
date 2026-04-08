@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shows — The Noise Lab</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="page-transition"></div>
+<nav id="navbar" role="navigation" aria-label="Navegación principal">
+  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
+    <li class="nav-accordion">
+      <button class="nav-accordion-btn" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
+      <ul class="nav-accordion-menu">
+        <li><a href="empresariales.html">• Eventos Empresariales</a></li>
+        <li><a href="corporativos.html">• Corporativos</a></li>
+      </ul>
+    </li>
+    <li class="nav-accordion">
+      <button class="nav-accordion-btn" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+      <ul class="nav-accordion-menu">
+        <li><a href="talentos.html">• Talentos</a></li>
+        <li><a href="shows.html" class="active">• Shows</a></li>
+        <li><a href="happenings.html">• Happenings</a></li>
+      </ul>
+    </li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="about.html">Sobre Nosotros</a></li>
+    <li><a href="booking.html">Contacto</a></li>
+  </ul>
+  <button class="nav-hamburger" type="button" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" role="dialog" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="eventos-sociales.html">Eventos Sociales</a>
+  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+    <a href="empresariales.html" class="nav-mobile-sub">• Eventos Empresariales</a>
+    <a href="corporativos.html" class="nav-mobile-sub">• Corporativos</a>
+  </div>
+  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
+  <div class="nav-mobile-sub-group">
+    <a href="talentos.html" class="nav-mobile-sub">• Talentos</a>
+    <a href="shows.html" class="nav-mobile-sub">• Shows</a>
+    <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
+  </div>
+  <a href="servicios.html">Servicios</a>
+  <a href="about.html">Sobre Nosotros</a>
+  <a href="booking.html">Contacto</a>
+</div>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-inner">
+    <div class="reveal"><span class="section-tag">Espectáculos Únicos</span></div>
+    <h1 class="page-hero-title reveal" data-delay="1">Nuestros <span>Shows</span></h1>
+    <p class="section-subtitle reveal" data-delay="2">Shows en vivo diseñados para sorprender, emocionar y entretener.</p>
+  </div>
+</section>
+<section class="section" style="background:var(--bg-0)">
+  <div class="container">
+    <div class="about-intro" style="grid-template-columns:1fr;max-width:800px;margin:0 auto;text-align:center">
+      <div>
+        <div class="reveal"><span class="section-tag">Espectáculos</span></div>
+        <h2 class="section-title reveal" data-delay="1" style="margin-bottom:1.5rem">Shows que <span>dejan huella</span></h2>
+        <p class="about-text reveal" data-delay="2">Producimos shows completos que van más allá de la música: experiencias audiovisuales con iluminación, efectos especiales, performers y una dirección artística cuidada al detalle.</p><p class="about-text reveal" data-delay="3">Desde shows musicales hasta performances artísticas, cada producción es diseñada específicamente para tu evento y tu audiencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section info-cards-section" style="background:var(--bg-1)">
+  <div class="container">
+    <div class="info-cards-grid">
+      <div class="info-card reveal" data-delay="1">
+        <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3 class="info-card-title">Shows Musicales</h3>
+        <p class="info-card-desc">Producciones musicales completas con artistas en vivo, sonido profesional e iluminación de espectáculo.</p>
+      </div>
+      <div class="info-card reveal" data-delay="2">
+        <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 class="info-card-title">Shows Artísticos</h3>
+        <p class="info-card-desc">Performances artísticas que fusionan música, danza, visuales y efectos para una experiencia total.</p>
+      </div>
+      <div class="info-card reveal" data-delay="3">
+        <div class="info-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3 class="info-card-title">Shows Especiales</h3>
+        <p class="info-card-desc">Producciones únicas diseñadas a medida para ocasiones y eventos muy especiales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SLIDER DE FOTOS -->
+<section class="section" style="background:var(--bg-0);padding-bottom:0">
+  <div class="container">
+    <div class="reveal"><span class="section-tag">Galería</span></div>
+    <h2 class="section-title reveal" data-delay="1">Momentos <span>Reales</span></h2>
+    <p class="section-subtitle reveal" data-delay="2">Algunos de los eventos que hemos producido.</p>
+  </div>
+</section>
+<section class="fslider-section">
+  <div class="fslider-wrap" id="fslider-show">
+    <div class="fslider-track" id="fslider-track-show">
+          <div class="fslider-slide"><img src="assets/show-gal-1.jpg" alt="Show Musical" loading="lazy"></div>
+          <div class="fslider-slide"><img src="assets/show-gal-2.jpg" alt="Show Artístico" loading="lazy"></div>
+          <div class="fslider-slide"><img src="assets/show-gal-3.jpg" alt="Show Especial" loading="lazy"></div>
+          <div class="fslider-slide"><img src="assets/show-gal-4.jpg" alt="Show Musical" loading="lazy"></div>
+          <div class="fslider-slide"><img src="assets/show-gal-5.jpg" alt="Show Artístico" loading="lazy"></div>
+          <div class="fslider-slide"><img src="assets/show-gal-6.jpg" alt="Show Especial" loading="lazy"></div>
+    </div>
+    <button type="button" class="fslider-arrow fslider-prev" data-slider="show" aria-label="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button type="button" class="fslider-arrow fslider-next" data-slider="show" aria-label="Siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="fslider-dots" id="fslider-dots-show">
+          <button type="button" class="fslider-dot active" data-idx="0" aria-label="Foto 1"></button>
+          <button type="button" class="fslider-dot" data-idx="1" aria-label="Foto 2"></button>
+          <button type="button" class="fslider-dot" data-idx="2" aria-label="Foto 3"></button>
+          <button type="button" class="fslider-dot" data-idx="3" aria-label="Foto 4"></button>
+          <button type="button" class="fslider-dot" data-idx="4" aria-label="Foto 5"></button>
+          <button type="button" class="fslider-dot" data-idx="5" aria-label="Foto 6"></button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <span class="section-tag" style="justify-content:center">Contacto</span>
+    <h2 class="section-title reveal">¿Listo para <span>tu evento?</span></h2>
+    <p class="section-subtitle reveal" data-delay="1">Hablemos y hagámoslo realidad.</p>
+    <div class="btn-row reveal" data-delay="2">
+      <a href="booking.html" class="btn btn-primary">Contáctanos</a>
+      <a href="about.html" class="btn btn-ghost">Saber Más</a>
+    </div>
+  </div>
+</section>
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">THE NOISE <span>LAB</span></div>
+        <p class="footer-desc">Más de 30 años de experiencia en el mundo del espectáculo y el entretenimiento nos respaldan.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navegación</h4><ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
+        <li><a href="empresariales.html">Eventos Empresariales</a></li>
+        <li><a href="corporativos.html">• Corporativos</a></li>
+        <li><a href="talentos.html">Talentos</a></li>
+        <li><a href="shows.html">• Shows</a></li>
+        <li><a href="happenings.html">• Happenings</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="about.html">Sobre Nosotros</a></li>
+        <li><a href="booking.html">Contacto</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contacto</h4><ul>
+        <li><a href="mailto:info@thenoiselab.com">info@thenoiselab.com</a></li>
+        <li><a href="booking.html">Reservar</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Noise Lab. Todos los derechos reservados.</span>
+      <span>Empujando fronteras sónicas en todo el mundo.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+<script>
+(function() {
+  var sliders = {};
+  function initSlider(id) {
+    var track = document.getElementById('fslider-track-' + id);
+    var dots  = document.querySelectorAll('#fslider-dots-' + id + ' .fslider-dot');
+    if (!track) return;
+    var total = track.children.length;
+    sliders[id] = { cur: 0, total: total };
+
+    function go(idx) {
+      var s = sliders[id];
+      s.cur = (idx % total + total) % total;
+      track.style.transform = 'translateX(-' + (s.cur * 100) + '%)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === s.cur); });
+    }
+
+    dots.forEach(function(d) {
+      d.addEventListener('click', function() { go(parseInt(this.dataset.idx)); });
+    });
+
+    setInterval(function() { go(sliders[id].cur + 1); }, 4500);
+  }
+
+  document.querySelectorAll('.fslider-arrow').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var id  = this.dataset.slider;
+      var dir = this.classList.contains('fslider-prev') ? -1 : 1;
+      if (sliders[id]) {
+        sliders[id].cur = (sliders[id].cur + dir + sliders[id].total) % sliders[id].total;
+        var track = document.getElementById('fslider-track-' + id);
+        if (track) track.style.transform = 'translateX(-' + (sliders[id].cur * 100) + '%)';
+        document.querySelectorAll('#fslider-dots-' + id + ' .fslider-dot').forEach(function(d, i) {
+          d.classList.toggle('active', i === sliders[id].cur);
+        });
+      }
+    });
+  });
+
+  // Auto-init all sliders on page
+  document.querySelectorAll('[id^="fslider-track-"]').forEach(function(el) {
+    var id = el.id.replace('fslider-track-', '');
+    initSlider(id);
+  });
+})();
+</script>
+</body>
+</html>
