@@ -39,7 +39,7 @@
         container.appendChild(p);
       }
     }
-    var entered = false, prog = 0, rafId, dur = 4000, t0 = Date.now();
+    var entered = false, prog = 0, rafId, dur = 7000, t0 = Date.now();
     function enterSite() {
       if (entered) return;
       entered = true;
@@ -57,23 +57,6 @@
     }
     requestAnimationFrame(tick);
     if (splashBtn) splashBtn.addEventListener('click', enterSite);
-  }
-
-  /* ── NAVBAR SCROLL ──────────────────────────────────────── */
-  var navbar = document.getElementById('navbar');
-  if (navbar) {
-    function onScroll() { navbar.classList.toggle('scrolled', window.scrollY > 40); }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    var hamburger = navbar.querySelector('.nav-hamburger');
-    var mobileNav = document.querySelector('.nav-mobile');
-    if (hamburger && mobileNav) {
-      hamburger.addEventListener('click', function() {
-        var open = navbar.classList.toggle('nav-open');
-        mobileNav.classList.toggle('open', open);
-        document.body.style.overflow = open ? 'hidden' : '';
-      });
-    }
   }
 
   /* ── SCROLL REVEAL ──────────────────────────────────────── */
@@ -219,64 +202,68 @@
 
 })();
 
-/* ── NAV ACCORDION ──────────────────────────────────────────
-   Runs AFTER DOM is ready. Handles desktop + mobile accordions.
-   Uses stopPropagation so page-transition doesn't interfere.
-   ─────────────────────────────────────────────────────────── */
-document.addEventListener('DOMContentLoaded', function() {
+/* ── NAV: SCROLL + HAMBURGER ────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function () {
 
-  /* Desktop */
-  document.querySelectorAll('.nav-accordion-btn').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var menu   = btn.nextElementSibling;
-      var isOpen = menu && menu.classList.contains('open');
-      /* Close all */
-      document.querySelectorAll('.nav-accordion-menu').forEach(function(m) { m.classList.remove('open'); });
-      document.querySelectorAll('.nav-accordion-btn').forEach(function(b) { b.setAttribute('aria-expanded','false'); });
-      /* Open this one if it was closed */
-      if (!isOpen && menu) {
-        menu.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-      }
+  var navbar     = document.getElementById('navbar');
+  var navToggle  = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var mobileClose = document.getElementById('mobileClose');
+
+  /* Scroll: add .scrolled class */
+  if (navbar) {
+    function onScroll() { navbar.classList.toggle('scrolled', window.scrollY > 50); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* Hamburger open */
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', function () {
+      var open = mobileMenu.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-  });
+  }
 
-  /* Close on outside click */
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.nav-accordion')) {
-      document.querySelectorAll('.nav-accordion-menu').forEach(function(m) { m.classList.remove('open'); });
-      document.querySelectorAll('.nav-accordion-btn').forEach(function(b) { b.setAttribute('aria-expanded','false'); });
-    }
-  });
-
-  /* Mobile */
-  document.querySelectorAll('.nav-mobile-accordion').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var group  = btn.nextElementSibling;
-      var isOpen = group && group.classList.contains('open');
-      document.querySelectorAll('.nav-mobile-sub-group').forEach(function(g) { g.classList.remove('open'); });
-      document.querySelectorAll('.nav-mobile-accordion').forEach(function(b) { b.setAttribute('aria-expanded','false'); });
-      if (!isOpen && group) {
-        group.classList.add('open');
-        btn.setAttribute('aria-expanded','true');
-      }
+  /* Close button inside overlay */
+  if (mobileClose && mobileMenu) {
+    mobileClose.addEventListener('click', function () {
+      mobileMenu.classList.remove('open');
+      if (navToggle) { navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+      document.body.style.overflow = '';
     });
-  });
+  }
 
-  /* Close mobile nav when any link inside is clicked */
-  var mobileNav = document.querySelector('.nav-mobile');
-  if (mobileNav) {
-    mobileNav.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        var nb = document.getElementById('navbar');
-        if (nb) nb.classList.remove('nav-open');
-        mobileNav.classList.remove('open');
+  /* Close overlay when any link inside is clicked */
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        if (navToggle) { navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
         document.body.style.overflow = '';
       });
     });
   }
+
+  /* Close overlay on outside click */
+  document.addEventListener('click', function (e) {
+    if (mobileMenu && mobileMenu.classList.contains('open') &&
+        !e.target.closest('#mobileMenu') && !e.target.closest('#navToggle')) {
+      mobileMenu.classList.remove('open');
+      if (navToggle) { navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+      document.body.style.overflow = '';
+    }
+  });
+
+  /* Close overlay on ESC */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+      mobileMenu.classList.remove('open');
+      if (navToggle) { navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+      document.body.style.overflow = '';
+    }
+  });
 
 });
