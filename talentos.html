@@ -4,59 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Talentos — The Noise Lab</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
 <div id="cursor-dot"></div>
 <div id="cursor-ring"></div>
 <div id="page-transition"></div>
-<nav id="navbar" role="navigation" aria-label="Navegación principal">
-  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
-  <ul class="nav-links">
+
+<nav id="navbar">
+  <a class="nav-brand" href="index.html">
+    <img src="assets/logo.png" alt="The Noise Lab" onerror="this.style.display='none';this.nextSibling.style.display='inline'">
+    <span style="display:none">THE NOISE LAB</span>
+  </a>
+  <ul class="nav-menu">
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
-    <li class="nav-accordion">
-      <button class="nav-accordion-btn" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
-      <ul class="nav-accordion-menu">
-        <li><a href="empresariales.html">• Eventos Empresariales</a></li>
-        <li><a href="corporativos.html">• Corporativos</a></li>
+    <li class="nav-item-dropdown">
+      <a href="eventos-sociales.html">Sociales<svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="conciertos.html">Conciertos</a></li>
       </ul>
     </li>
-    <li class="nav-accordion">
-      <button class="nav-accordion-btn" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
-      <ul class="nav-accordion-menu">
-        <li><a href="talentos.html" class="active">• Talentos</a></li>
-        <li><a href="shows.html">• Shows</a></li>
-        <li><a href="happenings.html">• Happenings</a></li>
+    <li class="nav-item-dropdown">
+      <a href="empresariales.html">Empresariales<svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="corporativos.html">Corporativos</a></li>
       </ul>
     </li>
+    <li><a href="talentos.html" class="active">Talentos</a></li>
     <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="about.html">Sobre Nosotros</a></li>
+    <li><a href="about.html">Nosotros</a></li>
     <li><a href="booking.html">Contacto</a></li>
   </ul>
-  <button class="nav-hamburger" type="button" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="nav-mobile" role="dialog" aria-label="Menú móvil">
-  <a href="index.html">Inicio</a>
-  <a href="eventos-sociales.html">Eventos Sociales</a>
-  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
-  <div class="nav-mobile-sub-group">
-    <a href="empresariales.html" class="nav-mobile-sub">• Eventos Empresariales</a>
-    <a href="corporativos.html" class="nav-mobile-sub">• Corporativos</a>
-  </div>
-  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
-  <div class="nav-mobile-sub-group">
-    <a href="talentos.html" class="nav-mobile-sub">• Talentos</a>
-    <a href="shows.html" class="nav-mobile-sub">• Shows</a>
-    <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
-  </div>
-  <a href="servicios.html">Servicios</a>
-  <a href="about.html">Sobre Nosotros</a>
-  <a href="booking.html">Contacto</a>
+<!-- MOBILE OVERLAY -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Cerrar">✕</button>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="eventos-sociales.html">Sociales</a></li>
+    <li class="mobile-sub"><a href="conciertos.html">→ Conciertos</a></li>
+    <li><a href="empresariales.html">Empresariales</a></li>
+    <li class="mobile-sub"><a href="corporativos.html">→ Corporativos</a></li>
+    <li><a href="talentos.html">Talentos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="about.html">Nosotros</a></li>
+    <li><a href="booking.html">Contacto</a></li>
+  </ul>
 </div>
+
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-grid"></div>
@@ -159,18 +161,20 @@
           <a href="#" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg></a>
         </div>
       </div>
-      <div class="footer-col"><h4>Navegación</h4><ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
-        <li><a href="empresariales.html">Eventos Empresariales</a></li>
-        <li><a href="corporativos.html">• Corporativos</a></li>
-        <li><a href="talentos.html">Talentos</a></li>
-        <li><a href="shows.html">• Shows</a></li>
-        <li><a href="happenings.html">• Happenings</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="about.html">Sobre Nosotros</a></li>
-        <li><a href="booking.html">Contacto</a></li>
-      </ul></div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="eventos-sociales.html">Sociales</a></li>
+          <li><a href="conciertos.html">• Conciertos</a></li>
+          <li><a href="empresariales.html">Empresariales</a></li>
+          <li><a href="corporativos.html">• Corporativos</a></li>
+          <li><a href="talentos.html">Talentos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="booking.html">Contacto</a></li>
+        </ul>
+      </div>
       <div class="footer-col"><h4>Contacto</h4><ul>
         <li><a href="mailto:info@thenoiselab.com">info@thenoiselab.com</a></li>
         <li><a href="booking.html">Reservar</a></li>

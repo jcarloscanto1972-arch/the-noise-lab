@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre mí — The Noise Lab</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔊</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,85 +15,56 @@
 <div id="cursor-ring"></div>
 <div id="page-transition"></div>
 
-
-
-<nav id="navbar" role="navigation" aria-label="Navegación principal">
-  <a class="nav-logo" href="index.html">THE NOISE <span>LAB</span></a>
-  <ul class="nav-links">
+<nav id="navbar">
+  <a class="nav-brand" href="index.html">
+    <img src="assets/logo.png" alt="The Noise Lab" onerror="this.style.display='none';this.nextSibling.style.display='inline'">
+    <span style="display:none">THE NOISE LAB</span>
+  </a>
+  <ul class="nav-menu">
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
-    <li class="nav-accordion">
-      <button class="nav-accordion-btn" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
-      <ul class="nav-accordion-menu">
-        <li><a href="empresariales.html">• Eventos Empresariales</a></li>
-        <li><a href="corporativos.html">• Corporativos</a></li>
+    <li class="nav-item-dropdown">
+      <a href="eventos-sociales.html">Sociales<svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="conciertos.html">Conciertos</a></li>
       </ul>
     </li>
-    <li class="nav-accordion">
-      <button class="nav-accordion-btn" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
-      <ul class="nav-accordion-menu">
-        <li><a href="talentos.html">• Talentos</a></li>
-        <li><a href="shows.html">• Shows</a></li>
-        <li><a href="happenings.html">• Happenings</a></li>
+    <li class="nav-item-dropdown">
+      <a href="empresariales.html">Empresariales<svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="corporativos.html">Corporativos</a></li>
       </ul>
     </li>
+    <li><a href="talentos.html">Talentos</a></li>
     <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="about.html" class="active">Sobre Nosotros</a></li>
+    <li><a href="about.html" class="active">Nosotros</a></li>
     <li><a href="booking.html">Contacto</a></li>
   </ul>
-  <button class="nav-hamburger" type="button" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="nav-mobile" role="dialog" aria-label="Menú móvil">
-  <a href="index.html">Inicio</a>
-  <a href="eventos-sociales.html">Eventos Sociales</a>
-  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Eventos Empresariales <span class="nav-arrow">▾</span></button>
-  <div class="nav-mobile-sub-group">
-    <a href="empresariales.html" class="nav-mobile-sub">• Eventos Empresariales</a>
-    <a href="corporativos.html" class="nav-mobile-sub">• Corporativos</a>
-  </div>
-  <button class="nav-mobile-accordion" type="button" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
-  <div class="nav-mobile-sub-group">
-    <a href="talentos.html" class="nav-mobile-sub">• Talentos</a>
-    <a href="shows.html" class="nav-mobile-sub">• Shows</a>
-    <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
-  </div>
-  <a href="servicios.html">Servicios</a>
-  <a href="about.html">Sobre Nosotros</a>
-  <a href="booking.html">Contacto</a>
+<!-- MOBILE OVERLAY -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Cerrar">✕</button>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="eventos-sociales.html">Sociales</a></li>
+    <li class="mobile-sub"><a href="conciertos.html">→ Conciertos</a></li>
+    <li><a href="empresariales.html">Empresariales</a></li>
+    <li class="mobile-sub"><a href="corporativos.html">→ Corporativos</a></li>
+    <li><a href="talentos.html">Talentos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="about.html">Nosotros</a></li>
+    <li><a href="booking.html">Contacto</a></li>
+  </ul>
 </div>
 
-  <button class="nav-mobile-accordion" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
-  <div class="nav-mobile-sub-group">
-  <a href="shows.html" class="nav-mobile-sub">• Shows</a>
-  <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
-  </div>
-  <a href="servicios.html">Servicios</a>
-  <a href="about.html">Sobre Nosotros</a>
-  <a href="booking.html">Contacto</a>
-</div>
-
-  <a href="servicios.html">Servicios</a>
-  <a href="about.html">Sobre Nosotros</a>
-  <a href="booking.html">Contacto</a>
-</div>
-
-  <button class="nav-mobile-accordion" aria-expanded="false">Talentos <span class="nav-arrow">▾</span></button>
-  <div class="nav-mobile-sub-group">
-    <a href="shows.html" class="nav-mobile-sub">• Shows</a>
-    <a href="happenings.html" class="nav-mobile-sub">• Happenings</a>
-  </div>
-  <a href="servicios.html">Servicios</a>
-  <a href="about.html">Sobre Nosotros</a>
-  <a href="booking.html">Contacto</a>
-</div>
-
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-grid"></div>
   <div class="container page-hero-inner">
     <span class="section-tag reveal">El Artista</span>
-    <h1 class="page-hero-title reveal" data-delay="1">Sobre mí La<br><span>Noise Lab</span></h1>
+    <h1 class="page-hero-title reveal" data-delay="1">Sobre <span>Nosotros</span></h1>
   </div>
 </section>
 
@@ -104,17 +73,17 @@
 <!-- INTRO -->
 <section class="section" style="background:var(--bg-1)">
   <div class="container">
-    <div class="about-intro">
+    <div class="about-intro" style="grid-template-columns:1fr;max-width:800px;margin:0 auto">
       <div>
         <h2 class="about-quote reveal">"El sonido no solo se escucha — <span>se siente, se vive y se recuerda.</span>"</h2>
         <p class="about-text reveal" data-delay="1">
-          Nacido en el underground, La Noise Lab surgió en 2018 como un proyecto dedicado al lado más crudo y cerebral de la música electrónica. Lo que comenzó como sesiones nocturnas de estudio evolucionó hacia un proyecto de gira global con una identidad sonora única.
+          Nacido en el underground, The Noise Lab surgió en 2018 como un proyecto dedicado al lado más crudo y cerebral de la música electrónica. Lo que comenzó como sesiones nocturnas de estudio evolucionó hacia un proyecto de gira global con una identidad sonora única.
         </p>
         <p class="about-text reveal" data-delay="2">
           Influenciado por la escena techno industrial de Berlín, el minimalismo profundo de Detroit y los bordes experimentales de la música ambient electrónica, el sonido evoluciona constantemente — siempre empujando los límites de lo que puede ser la música de baile.
         </p>
         <p class="about-text reveal" data-delay="3">
-          Más allá de los platos, La Noise Lab es la fuerza creativa detrás de SUBSYSTEM — una serie de eventos de larga trayectoria que ha redefinido la vida nocturna en su ciudad y ha girado internacionalmente por venues a sold-out en tres continentes.
+          Más allá de los platos, The Noise Lab es la fuerza creativa detrás de SUBSYSTEM — una serie de eventos de larga trayectoria que ha redefinido la vida nocturna en su ciudad y ha girado internacionalmente por venues a sold-out en tres continentes.
         </p>
         <div class="reveal" data-delay="4" style="margin-top:2rem">
           <a href="booking.html" class="btn btn-primary">Trabajar Juntos</a>
@@ -250,28 +219,29 @@
           </a>
         </div>
       </div>
-      <div class="footer-col"><h4>Navegación</h4><ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="eventos-sociales.html">Eventos Sociales</a></li>
-        <li><a href="empresariales.html">Eventos Empresariales</a></li>
-        <li><a href="corporativos.html">• Corporativos</a></li>
-        <li><a href="talentos.html">Talentos</a></li>
-        <li><a href="shows.html">• Shows</a></li>
-        <li><a href="happenings.html">• Happenings</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="about.html">Sobre Nosotros</a></li>
-        <li><a href="booking.html">Contacto</a></li>
-      </ul></div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="eventos-sociales.html">Sociales</a></li>
+          <li><a href="conciertos.html">• Conciertos</a></li>
+          <li><a href="empresariales.html">Empresariales</a></li>
+          <li><a href="corporativos.html">• Corporativos</a></li>
+          <li><a href="talentos.html">Talentos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="booking.html">Contacto</a></li>
+        </ul>
+      </div>
       <div class="footer-col"><h4>Música</h4><ul><li><a href="#">Spotify</a></li><li><a href="#">SoundCloud</a></li><li><a href="#">Beatport</a></li><li><a href="#">Apple Music</a></li><li><a href="#">YouTube</a></li></ul></div>
       <div class="footer-col"><h4>Contacto</h4><ul><li><a href="/cdn-cgi/l/email-protection#44262b2b2f2d2a233704302c212a2b2d37212825266a272b29"><span class="__cf_email__" data-cfemail="f3919c9c989a9d9480b3879b969d9c9a80969f9291dd909c9e">[email&#160;protected]</span></a></li><li><a href="/cdn-cgi/l/email-protection#43333126303003372b262d2c2a30262f22216d202c2e"><span class="__cf_email__" data-cfemail="42323027313102362a272c2d2b31272e23206c212d2f">[email&#160;protected]</span></a></li><li><a href="#">Kit de Prensa</a></li><li><a href="#">Rider Técnico</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 La Noise Lab. Todos los derechos reservados.</span>
+      <span>© 2026 The Noise Lab. Todos los derechos reservados.</span>
       <span>Empujando fronteras sónicas en todo el mundo.</span>
     </div>
   </div>
 </footer>
-</div>
   <script src="js/script.js"></script>
 </body>
 </html>
